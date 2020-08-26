@@ -78,7 +78,7 @@ navbar:
 footer:                 # Default footer image settings
   style:                secondary # default, muted, primary, secondary
   layout:               center # center or columns
-  copyright:             Made by <a href="https://uptec.io/">Uptec</a>.
+  copyright:             Made by <a href="https://uptec.io/">Uptec Pty Ltd</a>.
 
 mailchimp:
   form_action:          000000
