@@ -6,7 +6,7 @@
 
 # Site settings
 title:                  Uptec
-description:            Multipurpose Jekyll theme.
+description:            Cloud done differently.
 url:                    "https://uptec.io" # Site base hostname & protocol, e.g. http://example.com
 baseurl:                # Site subpath, e.g. /blog
 lang:                   en
@@ -78,7 +78,7 @@ navbar:
 footer:                 # Default footer image settings
   style:                secondary # default, muted, primary, secondary
   layout:               center # center or columns
-  copyright:            
+  copyright:             Made by <a href="https://uptec.io/">Uptec</a>.
 
 mailchimp:
   form_action:          000000
