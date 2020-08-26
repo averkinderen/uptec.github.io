@@ -1,45 +1,205 @@
-# Welcome to Jekyll!
+# Welcome to Plus!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# This config file affects your whole blog.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Uptec
-email: info@uptec.io
-phone: 0450590633
-description: coming soon
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://uptec.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: averkinderen
-github_username: averkinderen
+title:                  Uptec
+description:            Multipurpose Jekyll theme.
+url:                    "https://uptec.io" # Site base hostname & protocol, e.g. http://example.com
+baseurl:                # Site subpath, e.g. /blog
+lang:                   en
+logo:                   logo-dark.svg
+logo_light:             logo-light.svg
+permalink:              /:title/ # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
+date_format:            "%b %-d, %Y" # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+uploads:                /uploads/ # Path to post content assets directory i.e post images, pdfs etc
+template:               base
+
+paginate:               6 # Number of posts displayed on blog page
+paginate_path:          "/blog/:num/" # Blog path
+
+# Default author settings
+author:
+  name:                 Pete Seth
+  avatar:               avatar-tom.png
+  title:                Support     
+  bio:                  I am the CEO of this company, loved by everyone, just plain awesome so you want to follow me all the time.
+  url:
+  email:                info@uptec.io
+  website:
+  facebook:             https://www.facebook.com/
+  flickr:
+  dribbble:
+  github:
+  googleplus:
+  instagram:            https://www.instagram.com/
+  linkedin:
+  pinterest:
+  twitter:
+  vimeo:
+  youtube:
+
+# Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
+authors:
+  john:
+    name:               John Brown
+    title:              Support     
+    avatar:             avatar-john.png
+  evan:
+    name:               Evan Wells
+    title:              Support    
+    avatar:             avatar-evan.png
+  sara:
+    name:               Sara Galen
+    title:              Lead Developer     
+    avatar:             avatar-sara.png
+  alex:
+    title:              Design Engineer     
+    name:               Alex Koch
+    avatar:             avatar-alex.png
+  daniel:
+    title:              Developer      
+    name:               Daniel Shultz
+    avatar:             avatar-daniel.png
+  tom:
+    title:              Developer     
+    name:               Tom Farrell
+    avatar:             avatar-tom.png
+
+navbar:
+  layout:               default # default, center
+  color:                dark # text color, dark or light
+  animation:            true
+  sticky:               true
+  search:               false
+
+footer:                 # Default footer image settings
+  style:                secondary # default, muted, primary, secondary
+  layout:               center # center or columns
+  copyright:            
+
+mailchimp:
+  form_action:          000000
+  hidden_name:          000000
+  
+google_analytics:       # Google analytics code, get your code here https://www.google.com/analytics/
+google_maps_api_key:    # Google maps API key, get your key here: https://developers.google.com/maps/documentation/javascript/get-api-key
+
+disqus:
+  shortname:            # Disqus comments shortname, requires Disqus account https://disqus.com/
+
+instagram_accesstoken:  
+
+donations:
+  paypal:
+    id:                 # PayPal button ID
+    navbar:             # true
+
+# Social share buttons
+social_share:
+  twitter:              true
+  facebook:             true
+  linkedin:             true
+  pinterest:            true
+  reddit:               true
+
+# Social buttons
+social_networks:
+  email:                info@uptec.io
+  website:                https://uptec.io
+  facebook:             
+  flickr:
+  dribbble:
+  github:
+  googleplus:
+  instagram:            
+  linkedin:
+  pinterest:
+  twitter:
+  vimeo:
+  youtube:
 
 # Build settings
-markdown: kramdown
-theme:
+markdown:               kramdown
+highlighter:            rouge
+kramdown:
+  toc_levels:           "2"
+
 plugins:
+  - jekyll-paginate
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-sitemap
+  - jemoji
 
-include:
-  - _pages
+exclude: 
+  - vendor
+  - .bundle
+  - .sass-cache
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - log
+  - tmp
+  - Rakefile
+  - package.json
+  - CHANGELOG
+  - LICENSE
+  - README
+  - /docs
 
+sass:
+  style:                compressed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# collections:
+collections:
+  blocks:
+    output:             false
+  sidebars:
+    output:             false
+  faqs:
+    output:             false
+  portfolio:
+    output:             true
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path:                 ""
+      type:                 posts
+    values:
+      layout:               post
+      section:              large
+      sidebar: 
+        right:              blog
+      comments:             # true
+      share:                true
+      related:              true
+      mailchimp:            true
+      navbar:
+        transparent:        true
+        transparent_color:  light
+      header:
+        layout:             center
+        background_overlay: "rgba(0, 0, 0, 0.5)"
+        color:              light
+        header_size:        large
+        heading_size:       large
+        parallax:           true
+  # _pages
+  - scope:
+      path:                 ""
+      type:                 pages
+    values:
+      layout:               page
+  # _portfolio
+  - scope:
+      path:                 ""
+      type:                 portfolio
+    values:
+      layout:               page

@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+    {% include head.html %}
 
-<body>
-  <main class="page-content" aria-label="Content">
-    <div id="bg" style="margin: 0;
-  padding: 0; background: url({{site.url}}/images/background.jpg) center fixed no-repeat;
-    -moz-background-size: cover;
-    background-size: cover; opacity:0.2">
-  </div>
+    <body>
 
-<div id="container">
+    {% include partials/header.html %}
 
-  {{ content }}
-  {% include footer.html %}
+    {% assign width = page.width | default: 'default' %}
+    {% assign sidebar_left = page.sidebar.left %}
+    {% assign sidebar_right = page.sidebar.right %}
 
-</div>
+    {% if width == 'full' %}
+      {{ content }}
+    {% else %}
+      <div class="uk-section{% if page.section %} uk-section-{{ page.section }}{% endif %}">
+        <div class="uk-container{% if width %} uk-container-{{ width }}{% endif %}">
+          {% if sidebar_left %}
+            <div class="uk-flex uk-grid-large" data-uk-grid>
+              <div class="uk-width-expand@m">
+                {{ content }}
+              </div>
+              <aside class="uk-width-1-3@m uk-flex-first@m">
+                {% include sidebar.html %}
+              </aside>
+            </div>
+          {% elsif sidebar_right %}
+            <div class="uk-grid-large" data-uk-grid>
+              <div class="uk-width-expand@m">
+                {{ content }}
+              </div>
+              <aside class="uk-width-1-3@m">
+                {% include sidebar.html %}
+              </aside>
+            </div>
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
 
-</body>
+    {% if site.footer.layout == 'columns' %}
+      {% include partials/footer-columns.html %}
+    {% else %}
+      {% include partials/footer-center.html %}
+    {% endif %}
+
+    {% include partials/nav-mobile.html %}
+
+    {% include hook-pre-closing-body.html %}
+
+    </body>
+
 </html>

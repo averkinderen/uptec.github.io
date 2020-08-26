@@ -1,0 +1,9 @@
+# Navbar menu navigation links
+left:
+
+center:
+  - title: Home
+    url: /
+
+  - title: Blog
+    url: https://mscloud.be/
