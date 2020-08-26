@@ -4,7 +4,7 @@ navbar:
   sticky: true
   scroll_up: true
   animation: false
-  transparent: true
+  transparent: false
   transparent_color: light
 header:
   layout: 1-1 # Options: left, center, 1-1, 1-2, 1-3 or 2-3
