@@ -7,4 +7,4 @@ layout: default
 
 # Uptec
 
-![coming soon]({{ site.url }}/images/145426525.jpg)
+![coming soon]({{ site.url }}/images/145426525.jpg )
