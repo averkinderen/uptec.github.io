@@ -7,4 +7,4 @@ layout: default
 
 # Uptec
 
-![coming soon]({{ site.url }}/images/Website-ComingSoon-Splash-Rocket.png)
+![coming soon]({{ site.url }}/images/145426525_l.jpg)
