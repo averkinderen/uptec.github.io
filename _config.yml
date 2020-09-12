@@ -10,8 +10,8 @@ description:            Cloud done differently.
 url:                    "https://uptec.io" # Site base hostname & protocol, e.g. http://example.com
 baseurl:                # Site subpath, e.g. /blog
 lang:                   en
-logo:                   logo-dark.svg
-logo_light:             logo-light.svg
+logo:                   Logo-small.jpg
+logo_light:             Logo-small.jpg
 permalink:              /:title/ # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 date_format:            "%b %-d, %Y" # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 uploads:                /uploads/ # Path to post content assets directory i.e post images, pdfs etc
@@ -22,22 +22,22 @@ paginate_path:          "/blog/:num/" # Blog path
 
 # Default author settings
 author:
-  name:                 Pete Seth
+  name:                 Alexandre Verkinderen
   avatar:               avatar-tom.png
-  title:                Support     
-  bio:                  I am the CEO of this company, loved by everyone, just plain awesome so you want to follow me all the time.
+  title:                Director     
+  bio:                  I am the CEO of this company
   url:
   email:                info@uptec.io
   website:
-  facebook:             https://www.facebook.com/
+  facebook:             
   flickr:
   dribbble:
   github:
   googleplus:
-  instagram:            https://www.instagram.com/
-  linkedin:
+  instagram:            
+  linkedin: https://www.linkedin.com/in/alexandreverkinderen/
   pinterest:
-  twitter:
+  twitter:  https://twitter.com/AlexVerkinderen
   vimeo:
   youtube:
 
@@ -100,15 +100,15 @@ donations:
 # Social share buttons
 social_share:
   twitter:              true
-  facebook:             true
+  facebook:             false
   linkedin:             true
-  pinterest:            true
-  reddit:               true
+  pinterest:            false
+  reddit:               false
 
 # Social buttons
 social_networks:
   email:                info@uptec.io
-  website:                https://uptec.io
+  website:              https://uptec.io
   facebook:             
   flickr:
   dribbble:
