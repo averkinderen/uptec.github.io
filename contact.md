@@ -23,7 +23,3 @@ Example contact forms using free third party service [Formspree](https://formspr
 
 ## Stacked basic form
 {% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="false" subject="false" %}
-
-## Horizontal layout with subject and name
-{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" layout="horizontal" %}
-
