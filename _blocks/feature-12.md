@@ -1,5 +1,5 @@
 ---
-title: Navbar
+title: Cloud Governance
 icon: ios-navigation-toolbar-top.svg
 ---
 

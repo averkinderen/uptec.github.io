@@ -19,11 +19,12 @@ header:
 ---
 
 {% include cards.html 
-  block="card-media-12" 
-  media="left" 
+  block="feature-2" 
+  media="top" 
   section_size="large"
-  section_background="default"
-  section_title="Cards with images"
-  section_header_align="center"
+  section_padding_remove="top"
+  section_background="muted"
+  section_content_align="center"
   card_style="default"
+  grid="1-4"
 %}
