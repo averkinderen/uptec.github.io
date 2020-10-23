@@ -18,8 +18,8 @@ header:
   parallax: true
 ---
 
-Example contact forms using free third party service [Formspree](https://formspree.io/). There are two form layouts with optional name and subject fields.
+Didn't find what you're looking for? Leave us your contact details and we'll be in touch!
 {: .uk-text-lead}
 
 ## Stacked basic form
-{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="false" subject="false" %}
+{% include formspree.html email="alex@uptec.io" redirect="/thanks/" name="false" subject="false" %}
