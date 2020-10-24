@@ -37,3 +37,9 @@ Microsoft Most Valuable Professionals, or MVPs, are technology experts who passi
   caption="MVP"
   lightbox="true"
 %}
+
+## Community
+
+---
+
+We.
