@@ -1,6 +1,6 @@
 ---
 title: Our Services
-subtitle: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+subtitle: We'll help you to successfully design, implement and utilize cloud services.
 width: full
 navbar:
   sticky: true
@@ -13,12 +13,11 @@ header:
   background_image: header-8.jpg
   background_overlay: "rgba(51, 30, 0, 0.65)"
   color: light
-  header_size: xlarge
+  header_size: small
   heading_size: large
   height: full
 ---
 
-We'll help you to successfully design, implement and utilize cloud services.
 
 {% include cards.html 
   block="feature-2" 
