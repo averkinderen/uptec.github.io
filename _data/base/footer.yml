@@ -6,6 +6,8 @@ center:
   - title: Contact
     url: /contact/
 
+  - title: Privacy Policy
+    url: /privacy/
 
 # Columns style footer navigation
 columns:

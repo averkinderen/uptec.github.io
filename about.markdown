@@ -20,7 +20,7 @@ header:
   parallax: true
 ---
 
-Uptec is an innovative IT company which provides next-level Cloud consultancy and technology to leading brands worldwide.
+Uptec is an Cloud-born technology company, focused on architecting, building & operating cloud native applications, data streams, platforms and services. Our solutions are centred around Azure and best of breed technology.
 
 {% include label.html text="Our mission is to uplift customer's IT and business environment with Cloud Technology" %}
 
@@ -29,14 +29,6 @@ Uptec is an innovative IT company which provides next-level Cloud consultancy an
 ---
 
 Microsoft Most Valuable Professionals, or MVPs, are technology experts who passionately share their knowledge with the community. They are always on the “bleeding edge” and have an unstoppable urge to get their hands on new, exciting technologies. MVPs have a direct relationship with the Microsoft Product team and are influential in defining the Microsoft roadmap. Above all and in addition to their amazing technical abilities, MVPs are always willing to help others – that’s what sets them apart.
-
-{% include image.html 
-	src="MVP_Logo_Secondary_Blue288_RGB_300ppi-189x300.png"
-  alt="MVP"
-  align="right"
-  caption="MVP"
-  lightbox="true"
-%}
 
 ## Community
 
