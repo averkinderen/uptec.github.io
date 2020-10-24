@@ -1,6 +1,8 @@
 ---
 title: Cloud Security
-icon: ios-compact-camera.svg
+icon: ios-anonymous-mask.svg
 ---
 
-Display image galleries with lightbox and masonry layout options.
+Secure your platform, enhance identity and access, and lower costs.
+
+{% include button.html text="Join Us" url="#" style="default" %}

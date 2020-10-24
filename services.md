@@ -10,13 +10,15 @@ navbar:
   transparent_color: light
 header:
   layout: left # Options: left, center, 1-1, 1-2, 1-3 or 2-3
-  background_image: header-12.jpg
+  background_image: header-8.jpg
   background_overlay: "rgba(51, 30, 0, 0.65)"
   color: light
   header_size: xlarge
   heading_size: large
   height: full
 ---
+
+We'll help you to successfully design, implement and utilize cloud services.
 
 {% include cards.html 
   block="feature-2" 
