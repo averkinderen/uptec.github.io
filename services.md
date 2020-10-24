@@ -14,7 +14,7 @@ header:
   background_overlay: "rgba(51, 30, 0, 0.65)"
   color: light
   header_size: small
-  heading_size: large
+  heading_size: small
   height: full
 ---
 
