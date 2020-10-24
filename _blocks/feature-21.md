@@ -1,5 +1,5 @@
 ---
-title: Cards
+title: Governance
 icon: ios-unchecked-checkbox.svg
 ---
 
