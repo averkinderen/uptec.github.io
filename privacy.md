@@ -140,11 +140,11 @@ Last update: 13 th January 2020
 
 Under the GDPR individuals located in the EU have extra rights which apply to their personal information. Personal information under the GDPR is often referred to as personal information and is defined as information relating to an identified or identifiable natural person (individual). This Appendix sets out the additional rights we give to individuals located in the EU including how we process personal information lawfully, transparently and fairly. Please read the Privacy Policy above and this Appendix carefully and contact us at the details at the end of the Privacy Policy if you have any questions.
 
-# What personal information is relevant?
+## What personal information is relevant
 
 This Appendix applies to the personal information set out in the Privacy Policy above. This includes any sensitive information also listed in the Privacy Policy above which is known as ‘special categories of data’ under the GDPR.
 
-# How we process personal information
+## How we process personal information
 
 We will process your personal information for our legitimate interest to allow you to access and use our Services, to send you with marketing content we think may be of interest to you, to contact you if you leave your contact details with us or if you otherwise initiate contact with us.
 
@@ -158,7 +158,7 @@ Upon written request, we may provide you with a list of the third parties we use
 
 If you are under 16 years of age, you must have; and warrant to the extent permitted by law to us that you have, your parent or legal guardian’s permission to access and use the Services and they (your parents or guardian) have consented to you providing us with your personal information.
 
-# Data Retention
+## Data Retention
 
 We will only retain your personal information for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
 
@@ -168,11 +168,11 @@ In some circumstances you can ask us to delete your data: see ‘access, erasure
 
 In some circumstances we may anonymise your personal information (so that it can no longer be associated with you) for analytics, research or statistical purposes in which case we may use this anonymised information indefinitely without further notice to you.
 
-# Data Transfers
+## Data Transfers
 
 The countries to which we send data for the purposes listed above may not have the same data protection laws as the country in which you initially provided the information. If we transfer your personal information to third parties in other countries: (i) we will perform those transfers in accordance with the requirements of applicable law; and (ii) we will protect the transferred personal information in accordance with the Privacy Policy, as supplemented by this Appendix.
 
-# Extra rights for EU individuals
+## Extra rights for EU individuals
 
 **Objecting to processing**: You have the right to object to processing of your personal information that is based on our legitimate interests or public interest. If this is done, we must provide compelling legitimate grounds for the processing which overrides your interests, rights and freedoms, in order to proceed with the processing of your personal information.
 
