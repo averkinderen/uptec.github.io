@@ -1,5 +1,5 @@
 ---
-title: Governance
+title: Cloud Governance
 icon: ios-unchecked-checkbox.svg
 ---
 

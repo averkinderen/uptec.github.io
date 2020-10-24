@@ -1,5 +1,5 @@
 ---
-title: Galleries
+title: Cloud Security
 icon: ios-compact-camera.svg
 ---
 
