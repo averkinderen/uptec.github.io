@@ -1,72 +1,109 @@
-{% include partials/section-open.html 
-  section_size=include.section_size
-  section_padding_remove=include.section_padding_remove
-  section_header_align=include.section_header_align
-  section_height=include.section_height
-  section_header_color=include.section_header_color
-  section_container=include.section_container
-  section_title=include.section_title
-  section_subtitle=include.section_subtitle
-  section_background=include.section_background
-  section_image=include.section_image
-  section_video=include.section_video
-  section_image_align=include.section_image_align
-  section_overlay=include.section_overlay
-  section_content_align=include.section_content_align
-  section_content_color=include.section_content_color
-%}
-
-{% assign topics = '' %}
-
-{% for post in site.portfolio %}
-  {% assign t = post.topics | join: "," %}
-  {% if t != "" %}
-    {% capture topics %}{{topics}}{{t}},{% endcapture %}
-  {% endif %}
-{% endfor %}
-
-{% assign topics = topics | split: "," | uniq | sort: self %}
-
-{% if include.topic %}
-  {% assign portfolio = site.portfolio | where: "topics", include.topic %}
-{% else %}
-  {% assign portfolio = site.portfolio %}
-{% endif %}
-  <div data-uk-filter="target: [data-uk-grid]; animation: 500">
-		{% if include.filter %}
-			<ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center uk-margin-medium-bottom">
-				<li class="uk-active" data-uk-filter-control><a href="#">All</a></li>
-				{% for topic in topics %}
-					<li data-uk-filter-control="[data-topic*='{{ topic }}']"><a href="#">{{ topic | capitalize }}</a></li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-
-		<ul class="uk-child-width-1-2 uk-child-width-{{ include.grid | default: '1-4' }}@m{% if include.gutter %} uk-grid-{{ include.gutter }}{% endif %} uk-text-center" data-uk-grid="masonry: true">
-			{% for post in portfolio %}
-				<li data-topic="{{ post.topics }}">
-					<div class="uk-inline uk-light uk-transition-toggle">
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ site.uploads | absolute_url }}{{ post.image }}{% endif %}" alt="{{ post.title }}" data-uk-img>
-						<a href="{{ post.url | absolute_url }}" class="uk-overlay uk-overlay-primary uk-position-cover uk-transition-fade">
-							<div class="uk-position-center">
-								{% if include.title == 'bellow' %}
-									<span data-uk-icon="icon: link; ratio: 1.5"></span>
-								{% else %}
-									<h5 class="uk-text-uppercase uk-margin-remove">{{ post.title }}</h5>
-								{% endif %}
-							</div>
-						</a>
-					</div>
-					{% if include.title == 'bellow' %}
-						<h5 class="uk-text-uppercase uk-margin-top uk-margin-remove-bottom">{{ post.title }}</h5>
-					{% endif %}
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
-{% include partials/section-close.html 
-  section_size=include.section_size 
-	section_background=include.section_background
-	section_image=include.section_image
-	section_video=include.section_video
-%}
+    <!-- inner-portfolio -->
+    <section class="inner-portfolio-wrap theme-bg pt-133 pb-140">
+        <div class="container">
+            <div class="row align-items-center mb-40">
+                <div class="col-xl-8">
+                    <div class="section-title">
+                        <span>Portfolio</span>
+                        <h2>Here Is Some Awesome Work We Have Done.</h2>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="team-btn">
+                        <a href="#" class="btn">join with us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-menu portfolio-second-menu mb-40">
+                <button class="active" data-filter="*">All</button>
+                <button data-filter=".cat-one">web</button>
+                <button data-filter=".cat-two">ui/ux</button>
+                <button data-filter=".cat-three">development</button>
+                <button data-filter=".cat-four">branding</button>
+                <button data-filter=".cat-five">photo</button>
+            </div>
+        </div>
+        <div class="container-padding">
+            <div class="row portfolio-active">
+                <div class="col-xl-6 col-md-6 grid-item cat-two cat-three cat-four">
+                    <div class="portfolio-item text-center mb-30">
+                        <div class="portfolio-thumb">
+                            <img src="/assets/img/portfolio/inner_p1.jpg" alt="">
+                        </div>
+                        <div class="portfolio-overly">
+                            <span>branding</span>
+                            <h5><a href="#">Likaoli Limonda</a></h5>
+                            <div class="portfolio-link">
+                                <a href="/assets/img/portfolio/inner_p1.jpg" class="popup-image"><i class="fas fa-search"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 grid-item cat-three cat-five">
+                    <div class="portfolio-item text-center mb-30">
+                        <div class="portfolio-thumb">
+                            <img src="/assets/img/portfolio/inner_p2.jpg" alt="">
+                        </div>
+                        <div class="portfolio-overly">
+                            <span>branding</span>
+                            <h5><a href="#">Growsass</a></h5>
+                            <div class="portfolio-link">
+                                <a href="/assets/img/portfolio/inner_p2.jpg" class="popup-image"><i class="fas fa-search"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 grid-item cat-one cat-two cat-four">
+                    <div class="portfolio-item text-center mb-30">
+                        <div class="portfolio-thumb">
+                            <img src="/assets/img/portfolio/inner_p3.jpg" alt="">
+                        </div>
+                        <div class="portfolio-overly">
+                            <span>branding</span>
+                            <h5><a href="#">Limonda</a></h5>
+                            <div class="portfolio-link">
+                                <a href="/assets/img/portfolio/inner_p3.jpg" class="popup-image"><i class="fas fa-search"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 grid-item cat-three cat-five">
+                    <div class="portfolio-item text-center mb-30">
+                        <div class="portfolio-thumb">
+                            <img src="/assets/img/portfolio/inner_p4.jpg" alt="">
+                        </div>
+                        <div class="portfolio-overly">
+                            <span>branding</span>
+                            <h5><a href="#">Kanamachi</a></h5>
+                            <div class="portfolio-link">
+                                <a href="/assets/img/portfolio/inner_p4.jpg" class="popup-image"><i class="fas fa-search"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 grid-item cat-one cat-three cat-two">
+                    <div class="portfolio-item text-center mb-30">
+                        <div class="portfolio-thumb">
+                            <img src="/assets/img/portfolio/inner_p5.jpg" alt="">
+                        </div>
+                        <div class="portfolio-overly">
+                            <span>branding</span>
+                            <h5><a href="#">Apptick</a></h5>
+                            <div class="portfolio-link">
+                                <a href="/assets/img/portfolio/inner_p5.jpg" class="popup-image"><i class="fas fa-search"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-m-btn text-center mt-30">
+            <a href="#" class="btn">load More</a>
+        </div>
+    </section>
+    <!-- inner-portfolio-end -->

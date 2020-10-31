@@ -1,205 +1,106 @@
-# Welcome to Plus!
-#
-# This config file affects your whole blog.
-# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
-# If you change this file, please restart the server process.
 
-# Site settings
-title:                  Uptec
-description:            Cloud done differently.
-url:                    "https://uptec.io" # Site base hostname & protocol, e.g. http://example.com
-baseurl:                # Site subpath, e.g. /blog
-lang:                   en
-logo:                   Logo-small.jpg
-logo_light:             Logo-small.jpg
-permalink:              /:title/ # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
-date_format:            "%b %-d, %Y" # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-uploads:                /uploads/ # Path to post content assets directory i.e post images, pdfs etc
-template:               base
+title: "Uptec – Cloud done differently"
+description: >- # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://uptec.io" # the base hostname & protocol for your site, e.g. http://example.com
+phone_number: "+61450590633"
+email: "info@uptec.io"
+company_name: "Uptec Pty Ltd"
+site_logo_one: "/assets/img/logo/Logo-small.jpg"
+site_logo_two: "/assets/images/logo_3.png"
+site_logo_three: "/assets/images/logo_2.png"
+site_name: "Uptec"
 
-paginate:               6 # Number of posts displayed on blog page
-paginate_path:          "/blog/:num/" # Blog path
+page_banner_image: "/assets/img/bg/breadcrumb_bg.png"
 
-# Default author settings
-author:
-  name:                 Alexandre Verkinderen
-  avatar:               avatar-tom.png
-  title:                Director     
-  bio:                  I am the CEO of this company
-  url:
-  email:                info@uptec.io
-  website:
-  facebook:             
-  flickr:
-  dribbble:
-  github:
-  googleplus:
-  instagram:            
-  linkedin: https://www.linkedin.com/in/alexandreverkinderen/
-  pinterest:
-  twitter:  https://twitter.com/AlexVerkinderen
-  vimeo:
-  youtube:
+facebook_url: 
+twitter_url: "https://twitter.com/onva"
+behance_url: 
+youtube_url: 
+instagram_url: 
 
-# Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
-authors:
-  john:
-    name:               John Brown
-    title:              Support     
-    avatar:             avatar-john.png
-  evan:
-    name:               Evan Wells
-    title:              Support    
-    avatar:             avatar-evan.png
-  sara:
-    name:               Sara Galen
-    title:              Lead Developer     
-    avatar:             avatar-sara.png
-  alex:
-    title:              Design Engineer     
-    name:               Alex Koch
-    avatar:             avatar-alex.png
-  daniel:
-    title:              Developer      
-    name:               Daniel Shultz
-    avatar:             avatar-daniel.png
-  tom:
-    title:              Developer     
-    name:               Tom Farrell
-    avatar:             avatar-tom.png
+mailchimp_url: "https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&amp;id=342411fb35"
 
-navbar:
-  layout:               default # default, center
-  color:                dark # text color, dark or light
-  animation:            true
-  sticky:               true
-  search:               false
-
-footer:                 # Default footer image settings
-  style:                secondary # default, muted, primary, secondary
-  layout:               center # center or columns
-  copyright:             Made by <a href="https://uptec.io/">Uptec Pty Ltd</a>.
-
-mailchimp:
-  form_action:          000000
-  hidden_name:          000000
-  
-google_analytics:       # Google analytics code, get your code here https://www.google.com/analytics/
-google_maps_api_key:    AIzaSyDm5bYoLy4WGtXQYeJ73QV04iy7a400t60
-
-disqus:
-  shortname:            # Disqus comments shortname, requires Disqus account https://disqus.com/
-
-instagram_accesstoken:  
-
-donations:
-  paypal:
-    id:                 # PayPal button ID
-    navbar:             # true
-
-# Social share buttons
-social_share:
-  twitter:              true
-  facebook:             false
-  linkedin:             true
-  pinterest:            false
-  reddit:               false
-
-# Social buttons
-social_networks:
-  email:                info@uptec.io
-  website:              https://uptec.io
-  facebook:             
-  flickr:
-  dribbble:
-  github:
-  googleplus:
-  instagram:            
-  linkedin:
-  pinterest:
-  twitter:
-  vimeo:
-  youtube:
+permalink: "/:title"
 
 # Build settings
-markdown:               kramdown
-highlighter:            rouge
-kramdown:
-  toc_levels:           "2"
 
 plugins:
-  - jekyll-paginate
   - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-sitemap
-  - jemoji
+  - jekyll-paginate-v2
+  - jekyll-archives
 
-exclude: 
-  - vendor
-  - .bundle
-  - .sass-cache
-  - config
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - log
-  - tmp
-  - Rakefile
-  - package.json
-  - CHANGELOG
-  - LICENSE
-  - README
-  - /docs
+############################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+pagination:
+  
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
 
-sass:
-  style:                compressed
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
 
-# collections:
-collections:
-  blocks:
-    output:             false
-  sidebars:
-    output:             false
-  faqs:
-    output:             false
-  portfolio:
-    output:             true
+  # The default document collection to paginate if nothing is specified ('posts' is default)
+  collection: 'posts'
 
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path:                 ""
-      type:                 posts
-    values:
-      layout:               post
-      section:              large
-      sidebar: 
-        right:              blog
-      comments:             # true
-      share:                true
-      related:              true
-      mailchimp:            true
-      navbar:
-        transparent:        true
-        transparent_color:  light
-      header:
-        layout:             center
-        background_overlay: "rgba(0, 0, 0, 0.5)"
-        color:              light
-        header_size:        large
-        heading_size:       large
-        parallax:           true
-  # _pages
-  - scope:
-      path:                 ""
-      type:                 pages
-    values:
-      layout:               page
-  # _portfolio
-  - scope:
-      path:                 ""
-      type:                 portfolio
-    values:
-      layout:               page
+  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 6
+
+  # The permalink structure for the paginated pages (this can be any level deep)
+  permalink: '/blog/:num/' # Pages are index.html inside this folder (default)
+  #permalink: '/page/:num.html' # Pages are simple html files 
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ':title - page :num'
+
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+  
+  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  sort_field: 'date'
+
+  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  sort_reverse: true
+
+  # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  category: 'posts'
+
+  # Optional, the default tag to use, omit to disable
+  tag: ''
+
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts, 
+  # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
+  locale: '' 
+
+ # Optional,omit or set both before and after to zero to disable. 
+ # Controls how the pagination trail for the paginated pages look like. 
+  trail: 
+    before: 2
+    after: 2
+
+  # Optional, the default file extension for generated pages (e.g html, json, xml).
+  # Internally this is set to html by default
+  extension: html
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  indexpage: 'index'
+
+############################################################
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+jekyll-archives:
+  enabled: all
+  layout: category
+  permalinks:
+    category: '/category/:name/'
+
+feed:
+  collections:
+    posts:
+      path: "/index.xml"
