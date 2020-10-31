@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Privacy
 subtitle: The options and possibilities are endless
 width: full
