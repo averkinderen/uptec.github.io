@@ -6,7 +6,7 @@ url: "https://uptec.io" # the base hostname & protocol for your site, e.g. http:
 phone_number: "+61450590633"
 email: "info@uptec.io"
 company_name: "Uptec Pty Ltd"
-site_logo_one: "/assets/img/logo/Logo-small.jpg"
+site_logo_one: "/assets/img/Logo-transparant.png"
 site_logo_two: "/assets/images/logo_3.png"
 site_logo_three: "/assets/images/logo_2.png"
 site_name: "Uptec"
