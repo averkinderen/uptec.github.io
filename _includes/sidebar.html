@@ -1,18 +1,6 @@
 <aside>
     <div class="widget mb-40">
         <div class="widget-title text-center">
-            <h4>Photo Gallery</h4>
-        </div>
-        <ul class="widget-insta-post gallery-wrapper">
-           {% for post in site.posts | limit:"9" %}
-            {% if post.post_image %}
-             <li><a class="image-link" href="{{post.post_image}}"><img src="{{post.post_image}}" alt="{{post.title}}"/></a></li>
-            {% endif %}
-           {% endfor %}
-        </ul>
-    </div>
-    <div class="widget mb-40">
-        <div class="widget-title text-center">
             <h4>Follow Us</h4>
         </div>
         <div class="widget-social text-center">
@@ -35,7 +23,7 @@
     </div>
     <div class="widget mb-40">
         <div class="widget-title text-center">
-            <h4>Categories Test</h4>
+            <h4>Categories</h4>
         </div>
             <ul class="cat__list">
             {% assign categories_list = site.categories %}
@@ -72,25 +60,5 @@
                 {% endfor %}
             </ul>
         </div>
-    </div>
-    <div class="widget mb-40">
-        <div class="widget-title text-center">
-            <h4>Tags</h4>
-        </div>
-        <div class="widget__tag">
-        <ul class="tags_list">
-            {% capture tags %}
-              {% for tag in site.tags %}
-                <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-                   <a class="tag_1" href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span> ({{ tag[1].size }})</span></a>
-                </li>
-              {% endfor %}
-            {% endcapture %}
-            {{ tags | split:'</li>' | sort | join:'</li>' }}
-        </ul>
-        </div>
-    </div>
-    <div class="widget widget__banner mb-50">
-    {% include add.html %}
     </div>
 </aside>
