@@ -3,7 +3,7 @@
 - text: Home
   url: /
 - text: Blog
-  url: https://mscloud.be
+  url: /blog
 - text: Contact
   url: /contact
 - text: Privacy
