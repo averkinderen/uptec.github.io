@@ -1,10 +1,9 @@
 ---
+layout: post
 title: "Use Azure DevOps Self Hosted agents with Azure App Service access restrictions"
-categories:
-  - Azure
-tags:
-  - Azure
-  - Azure Devops
+date: 2020-15-05 20:37:13 +0600
+categories: [Azure]
+tags: Azure Devops
 ---
 
 By default, when you deploy a new Azure WebApp, Function app or API app it will be publicly available to the internet. For the current customer I'm working on we made it a standard that all webapps should not be directly publicly available. To enhance our security we deploy Azure Frontdoor and Azure API Management Service for our APIs and also [enable IP restrictions](https://docs.microsoft.com/en-us/azure/app-service/app-service-ip-restrictions). As mentioned in my [previous blog post](https://mscloud.be/azure/Update-API-in-APIM-from-Azure-Devops/) we currently use Azure DevOps with Microsoft hosted agents to build and release all of our web apps and API apps.
