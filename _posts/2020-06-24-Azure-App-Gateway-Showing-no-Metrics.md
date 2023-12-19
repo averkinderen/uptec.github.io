@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "The curious case of an Azure Application Gateway showing no metrics and logs"
 author: Alexandre Verkinderen
 categories:
