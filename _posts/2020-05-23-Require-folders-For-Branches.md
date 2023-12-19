@@ -1,5 +1,6 @@
 ---
 title: "Define a hierarchical structure for your Azure DevOps branches"
+author: Alexandre Verkinderen
 categories:
   - Azure
 tags:

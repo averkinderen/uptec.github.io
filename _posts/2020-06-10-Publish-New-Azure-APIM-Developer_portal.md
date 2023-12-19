@@ -1,5 +1,6 @@
 ---
 title: "Publish the new Azure API Management Service Developer Portal behind an Application Gateway"
+author: Alexandre Verkinderen
 categories:
   - Azure
 tags:

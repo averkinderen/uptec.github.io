@@ -1,5 +1,6 @@
 ---
 title: "Setting an Azure AD group to Azure SQL Database with ARM templates"
+author: Alexandre Verkinderen
 categories:
   - Azure
 tags:
