@@ -6,8 +6,7 @@ categories:
 tags:
   - Azure
   - Azure Devops
-header:
-  og_image: /assets/images/2020-06-06-AzureSQL-SetADadmin.png
+post_image: /assets/images/2020-06-06-AzureSQL-SetADadmin.png
 ---
 
 I was recently looking at a way to automatically set an Azure AD group as the SQL admin for our Azure SQL databases with ARM tempplates. We use SQL authentication and Azure AD authentication for our SQL databases. The password for the SQL admin gets generated randomly as part of our pipeline and stored in Keyvault. We also have a dedicated team of SQL DBAs who would need to connect to the deployed SQL resources using their Azure AD credentials.

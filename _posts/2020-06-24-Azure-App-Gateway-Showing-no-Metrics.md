@@ -6,8 +6,7 @@ categories:
 tags:
   - Azure
   - Azure Application Gateway
-header:
-  og_image: /assets/images/2020-06-24-Azureappgw-nometrics.png
+post_image: /assets/images/2020-06-24-Azureappgw-nometrics.png
 ---
 
 This is the curious case of an Azure Application Gateway showing no metrics and logs at all. Even thought this was one of the main customer's production Application Gateways we could see 0 requests in the metrics. Which was strange as behind the Application Gateway was an online webshop which served thousands of customers every day.

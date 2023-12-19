@@ -6,8 +6,7 @@ categories:
 tags:
   - Azure
   - Azure Devops
-header:
-  og_image: /assets/images/2020-07-11-AutomaticGUI.PNG
+post_image: /assets/images/2020-07-11-AutomaticGUI.PNG
 ---
 
 With more and more of our development and infrastructure projects being built and released via Azure DevOps, I find myself creating a few DevOps projects which, at creation time, share identical configs like service connections, permissions, repository names etc. Therefore, this week I have been trying to automate the creation of Azure DevOps projects. Many of the configs are easily configurable with AzureCLI and the Devops extension of it, but one thing I was struggling with was the creation of the service connections to our Azure subscriptions the way we do it [from the GUI.](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-using-automated-security) We are using the Automatic Option when setting up the service connections for each one of our Azure subscriptions.
