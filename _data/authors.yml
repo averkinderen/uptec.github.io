@@ -28,23 +28,15 @@ waltor_gottera:
     bio: Waltor Gottera received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
     image: /assets/images/author-img6.jpg
 
-ecuelass_chapman:
-    name: Ecuelass Chapman
-    email: ecuelasschapman@gmail.com
-    facebook: http://facebook.com/wcuelass
-    twitter: http://twitter.com/wcuelass
-    instagram: http://instagram.com/wcuelass
-    reddit: http://reddit.com/wcuelass 
-    bio: ecuelass_chapman received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
-    image: /assets/images/author-img7.jpg
+Rodney Almeida:
+    name: Rodney Almeida
+    email:
+    bio: Coming from a System’s Administrator background, he enjoys working on projects from the ground up and playing with new technologies. He has been exploring Azure for a while and has recently started dipping his toes in Azure DevOps.
+    image: /assets/images/Rodney.jpg
 
-aaron_potts:
-    name: Aaron Potts
-    email: aaron_potts@gmail.com
-    facebook: http://facebook.com/aaronpotts
-    twitter: http://twitter.com/aaronpotts
-    instagram: http://instagram.com/aaronpotts
-    reddit: http://reddit.com/aaronpotts 
-    bio: Aaron Potts received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
-    image: /assets/images/author-img2.jpg
-  
+Alexandre Verkinderen:
+    name: Alexandre Verkinderen
+    email: alex@uptec.io
+    twitter: https://twitter.com/AlexVerkinderen
+    bio: He is a Hybrid Cloud Architect and actively assist large organizations to help them envision architect, implement, configure, and customize their Microsoft Cloud solutions.
+    image: /assets/images/bio-photo.jpg
