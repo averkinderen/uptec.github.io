@@ -17,20 +17,6 @@ layout: default
                        <div class="post-content">
                        	{{page.content}}
                        </div>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-7">
-                                <div class="post__tag">
-                                    <h5>Releted Tags</h5>
-                                     {{page | tags | capitalize | replace: ","," "}}
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-md-5">
-                                <div class="post__share text-right">
-                                    <h5>Social Share</h5>
-                                    {% include social_share.html %}
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="posts_navigation pt-35 pb-35">
                         <div class="row align-items-center">
