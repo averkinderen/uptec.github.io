@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create an Automatic Service Principal Azure RM Service Connection in Azure DevOps via Azure CLI"
-author: Rodney Almeida
+author: rodney_almeida
 categories:
   - Azure
 tags:

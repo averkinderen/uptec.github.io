@@ -4,7 +4,7 @@ title: "Seo Friendly Post Title venenatis a condimentum vitae"
 date: 2019-02-01 20:37:13 +0600
 tags: technology education
 categories: [health]
-author: "ecuelass_chapman"
+author: alexandre_verkinderen
 post_image: "/assets/img/blog/01.jpg"
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Alexandre Verkinderen
+author: alexandre_verkinderen
 title: "Use Azure DevOps Self Hosted agents with Azure App Service access restrictions"
 date: 2020-05-15 20:37:13 +0600
 categories: [Azure]

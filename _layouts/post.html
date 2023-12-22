@@ -61,22 +61,23 @@ layout: default
                             {% endfor %}
                         </div>
                     </div>
+
+                    {% assign author = site.data.authors[page.author] %}
                     <div class="avatar__wrap text-center mb-45">
                         <div class="avatar-img">
-                            <img class="img-fluid" src="{{relative_url}}/assets/images/avatar.png" alt="author"/>
+                            <img style="width: 150px;" class="img-fluid rounded-circle" src="{{relative_url}}{{author.image}}" alt="author"/>
                         </div>
                         <div class="avatar__info">
-                            <h5>Rosalina William</h5>
+                            <h5>{{author.name}}</h5>
                             <div class="avatar__info-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="{{author.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{author.twitter}}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{author.github}}"><i class="fab fa-github"></i></a>
+                                <a href="{{author.linkedin}}"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="avatar__wrap-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa aute irure dolor.</p>
+                            <p>{{author.bio}}</p>
                         </div>
                     </div>
                     <div class="comment__wrap pb-45 mb-45">

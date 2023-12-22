@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 gemspec
 gem "kramdown-parser-gfm"
-# gem "jekyll-paginate-v2"
-gem "jekyll-paginate"
+gem "jekyll-paginate", "~> 1.1.0"
 gem "github-pages"
 gem "jekyll-archives"

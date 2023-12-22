@@ -1,42 +1,34 @@
-monica_powell:
-    name: Monica Powell
-    email: monica@aboutmonica.com
-    facebook: http://facebook.com/monica_powell
-    twitter: http://twitter.com/monica_powell
-    instagram: http://instagram.com/monica_powell
-    reddit: http://reddit.com/monica_powell 
-    bio: Monica Powell is a web technologist that cares about increasing the visiblity of underestimated individuals in technology.
-    image: /assets/images/author-img1.jpg
-  
-themeix:
-    name: Themeix
-    email: themeix@gmail.com
-    facebook: http://facebook.com/themeix
-    twitter: http://twitter.com/themeix
-    instagram: http://instagram.com/themeix
-    reddit: http://reddit.com/themeix 
-    bio: Themeix received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
-    image: /assets/images/author-img11.jpg
+alexandre_verkinderen:
+    name: "Alexandre Verkinderen"
+    email: "alex@uptec.io"
+    image: "/assets/images/authors/alex.jpg"
+    bio: "He is a Hybrid Cloud Architect and actively assist large organizations to help them envision architect, implement, configure, and customize their Microsoft Cloud solutions."
+    facebook: "https://facebook.com"
+    twitter: "https://twitter.com/AlexVerkinderen"
+    github: "https://github.com/averkinderen"
+    linkedin: "https://www.linkedin.com/in/alexandreverkinderen"
 
-waltor_gottera:
-    name: Waltor Gottera
-    email: waltorgottera@gmail.com
-    facebook: http://facebook.com/waltorgottera
-    twitter: http://twitter.com/waltorgottera
-    instagram: http://instagram.com/waltorgottera
-    reddit: http://reddit.com/waltorgottera 
-    bio: Waltor Gottera received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
-    image: /assets/images/author-img6.jpg
+mirzaevolution:
+    name: "Mirza Ghulam Rasyid"
+    email: "mirza@uptec.io"
+    image: "/assets/images/authors/mirza.png"
+    bio: "Senior Fullstack Developer and DevOps Engineer that specialized in Software Development mostly using Microsoft Technologies and Cloud Services (Azure and AWS)."
+    facebook: "https://www.facebook.com/ghulamrasyid"
+    twitter: "https://twitter.com/mirzaevolution"
+    github: "https://github.com/mirzaevolution"
+    linkedin: "https://www.linkedin.com/in/mirzaghulamrasyid/"
 
-Rodney Almeida:
-    name: Rodney Almeida
-    email:
-    bio: Coming from a System’s Administrator background, he enjoys working on projects from the ground up and playing with new technologies. He has been exploring Azure for a while and has recently started dipping his toes in Azure DevOps.
-    image: /assets/images/Rodney.jpg
 
-Alexandre Verkinderen:
-    name: Alexandre Verkinderen
-    email: alex@uptec.io
-    twitter: https://twitter.com/AlexVerkinderen
-    bio: He is a Hybrid Cloud Architect and actively assist large organizations to help them envision architect, implement, configure, and customize their Microsoft Cloud solutions.
-    image: /assets/images/bio-photo.jpg
+rodney_almeida:
+    name: "Rodney Almeida"
+    email: ""
+    image: "/assets/images/authors/Rodney.jpg"
+    bio: "Coming from a System's Administrator background, he enjoys working on projects from the ground up and playing with new technologies. He has been exploring Azure for a while and has recently started dipping his toes in Azure DevOps."
+    facebook: "https://www.facebook.com/"
+    twitter: "https://twitter.com/"
+    github: "https://github.com/"
+    linkedin: "https://www.linkedin.com/in/rodney-almeida-2ab1042b"
+
+
+
+
