@@ -13,6 +13,8 @@ pagination:
         <div class="row">
             <div class="col-lg-8">
                 {% for post in paginator.posts %}
+                {% assign author = site.data.authors[post.author] %}
+
                 <div class="bsingle__post mb-50">
                     {% if post.post_image %}
                     <div class="bsingle__post-thumb">
@@ -22,7 +24,7 @@ pagination:
                     <div class="bsingle__content">
                         <div class="meta-info">
                             <ul>
-                                <li><i class="far fa-user"></i>by {{post.author}}</li>
+                                <li><i class="far fa-user"></i>by {{author.name}}</li>
                                 <li><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.id}}"> <i class="far fa-comments"></i>0 comments</a></li>
 
                             </ul>

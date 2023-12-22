@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Book: Inside Azure Management V4"
-author: Alexandre Verkinderen
+author: alexandre_verkinderen
 categories:
   - Azure
 tags:
