@@ -1,4 +1,6 @@
 ---
+layout: post
+author: alexandre_verkinderen
 title: "Securing your Azure Functions App with API Management"
 categories:
   - Azure
