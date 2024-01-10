@@ -28,22 +28,9 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-archives
 
 paginate: 6
 paginate_path: "/blog/page:num"
-
-
-tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
-
-
-jekyll-archives:
-  enabled: all
-  layout: category
-  permalinks:
-    category: '/category/:name/'
 
 feed:
   collections:
