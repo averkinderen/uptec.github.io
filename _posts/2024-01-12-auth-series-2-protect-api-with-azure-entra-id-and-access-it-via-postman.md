@@ -20,7 +20,7 @@ post_image: /assets/images/auth-series-2/2024-01-11_17h42_18.png
 
 
 This is 2nd tutorial of the **Auth Series**. In this tutorial, we'll create
-a basic ASP.NET Core Web Api and protect it using Azure AD/Entra ID.
+a basic ASP.NET Core Web Api and protect it using Azure AD/Microsoft Entra ID.
 If you want to know how to protect web app with Azure AD/Microsoft Entra ID, you can checkout 
 our previous tutorial: [Auth Series #1 - Azure Entra Id Authentication using ASP.NET Core MVC](/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
 
@@ -181,7 +181,7 @@ Ok, because we got 401, we need our Postman to be authenticated to access the en
 Now, we will create new App Registration special for any client that will access any protected apis 
 that we define.
 
-Give the name anything but ended with **-caller** (optional - previous app registration was **uptect-auth-ap**).
+Give the name anything but ended with **-caller** (optional - previous app registration was **uptect-auth-api**).
 
 ![2024 01 11 17H42 29](/assets/images/auth-series-2/2024-01-11_17h42_29.png)
 
