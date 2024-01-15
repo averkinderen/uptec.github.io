@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Auth Series #2 - Protect ASP.NET Core Api with Azure Entra ID and Access It via Postman"
+title: "Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman"
 author: mirzaevolution
 categories:
   - Azure
@@ -15,13 +15,13 @@ tags:
 post_image: /assets/images/auth-series-2/2024-01-11_17h42_18.png
 ---
 
-# Auth Series #2 - Protect ASP.NET Core Api with Azure Entra ID and Access It via Postman
+# Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman
 
 
 
 This is 2nd tutorial of the **Auth Series**. In this tutorial, we'll create
 a basic ASP.NET Core Web Api and protect it using Azure AD/Entra ID.
-If you want to know how to protect web app with Azure AD/Entra ID, you can checkout 
+If you want to know how to protect web app with Azure AD/Microsoft Entra ID, you can checkout 
 our previous tutorial: [Auth Series #1 - Azure Entra Id Authentication using ASP.NET Core MVC](/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
 
 
@@ -44,7 +44,7 @@ protect our api. First, we need to go to **Microsoft Entra ID Portal > App Regis
 
 ![2024 01 11 17H17 43](/assets/images/auth-series-2/2024-01-11_17h17_43.png)
 
-In this tutorial, we will give name **uptec-auth-api** but you can give anyname you want. Leave other options and hit Register.
+In this tutorial, we will give name **uptec-auth-api** but you can give any name you want. Leave other options and hit Register.
 
 ![2024 01 11 17H21 01](/assets/images/auth-series-2/2024-01-11_17h21_01.png)
 
@@ -68,7 +68,7 @@ Add the Application ID URI like the image below.
 ![2024 01 11 17H23 45](/assets/images/auth-series-2/2024-01-11_17h23_45.png)
 
 After that, add a new scope, give it name -> **Access.Read** and fill other 
-informations like Title and Description like in the screenshot below.
+information like Title and Description like in the screenshot below.
 
 ![2024 01 11 17H25 22](/assets/images/auth-series-2/2024-01-11_17h25_22.png)
 
@@ -89,7 +89,7 @@ other options as screenshots below.
 
 ![2024 01 11 17H27 22](/assets/images/auth-series-2/2024-01-11_17h27_22.png)
 
-Once the project initialized, modify the appsettings.json and add the below section.
+Once the project initialized, modify the **appsettings.json** and add the below section.
 
     "AzureAd": {
         "Instance": "https://login.microsoftonline.com/",
@@ -169,7 +169,7 @@ to be **Authorized**. It means, only authenticated members are allowed to access
 
 ### 5. Test The App - Got 401 Unauthorized
 
-Right. Now we will test the app using Postman. And because we are not authenticated, of course 
+Now we will test the app using Postman. And because we are not authenticated, of course 
 we'll get 401.
 
 ![2024 01 11 17H42 18](/assets/images/auth-series-2/2024-01-11_17h42_18.png)
@@ -235,7 +235,7 @@ app registration.
 
 Take a note both the OAuth v2 authorization and token endpoints like the image below: 
 
-**NB: This is api's app registration not Postman's app regisration**
+**NB: This is api's app registration not Postman's app registration**
 
 ![2024 01 11 17H50 19](/assets/images/auth-series-2/2024-01-11_17h50_19.png)
 
@@ -259,7 +259,7 @@ Now, fill the information in the section below:
 <br/>
 
 After that, scroll down and click the **Get New Access Token**. It will authenticate using browser.
-And on the successfull sign-in, make sure you proceed and click **Use Token** button.
+And on the successful sign-in, make sure you proceed and click **Use Token** button.
 
 ![2024 01 11 17H54 58](/assets/images/auth-series-2/2024-01-11_17h54_58.png)
 
