@@ -4,12 +4,12 @@ title: "Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Ac
 author: mirzaevolution
 categories:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
   - Authorization
 tags:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
   - Authorization
 post_image: /assets/images/auth-series-2/2024-01-11_17h42_18.png
