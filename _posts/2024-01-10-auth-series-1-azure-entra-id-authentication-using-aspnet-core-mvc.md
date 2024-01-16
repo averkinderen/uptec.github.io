@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Auth Series #1 - Microsoft Entra Entra ID Authentication using ASP.NET Core MVC"
+title: "Auth Series #1 - Microsoft Entra ID Authentication using ASP.NET Core MVC"
 author: mirzaevolution
 categories:
   - Azure
