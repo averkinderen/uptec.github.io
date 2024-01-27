@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Auth Series #1 - Using Azure Entra Id Authentication with ASP.NET Core MVC"
+title: "Auth Series #1 - Microsoft Entra ID Authentication using ASP.NET Core MVC"
 author: mirzaevolution
 categories:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
 tags:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
-post_image: /assets/images/auth-series-1/2024-01-10_09h22_31.png
+post_image: /assets/images/auth-series-1/2024-01-15_08h50_42.png
 ---
 
-# Auth Series #1 - Azure Entra Id Authentication using ASP.NET Core MVC
+# Auth Series #1 - Microsoft Entra ID Authentication using ASP.NET Core MVC
 
 This tutorial will be a series of blog posts to cover some common Authentication/Authorization scenarios using Azure Entra Id (Azure AD).
 Here are the details of the sample project used:
