@@ -135,7 +135,7 @@ Go to the nuget package, please add the following nuget package as well
 
 ![2024 01 18 12H03 17](/assets/images/auth-series-5/2024-01-18_12h03_17.png)
 
-Also, we need to modify the appsettings.json to hold the Azure Ad related informations like client id, tenant id, etc.
+Also, we need to modify the appsettings.json to hold the Azure Ad related information like client id, tenant id, etc.
 
 ```
  "AzureAd": {
