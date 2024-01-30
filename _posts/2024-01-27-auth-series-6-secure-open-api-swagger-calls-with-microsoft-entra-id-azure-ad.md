@@ -192,7 +192,7 @@ Ok, now we are going to test our Swagger. When you run the project, go to /swagg
 
 ![2024 01 27 00H14 12](/assets/images/auth-series-6/2024-01-27_00h14_12.png)
 
-Do you notice Authorize button above? That button used to authenticate our calls. If you don't hit that for authentiation, when you test 
+Do you notice Authorize button above? That button used to authenticate our calls. If you don't hit that for authentication, when you test 
 the api, you'll get 401 like in the screenshot below. 
 
 ![2024 01 27 01H14 50](/assets/images/auth-series-6/2024-01-27_01h14_50.png)
