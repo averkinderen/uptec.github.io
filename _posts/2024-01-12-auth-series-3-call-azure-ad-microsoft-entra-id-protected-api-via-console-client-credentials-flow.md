@@ -18,7 +18,7 @@ post_image: /assets/images/auth-series-3/2024-01-14_10h35_32.png
 # Auth Series #3 - Call ASP.NET Core API Protected by Azure AD/Microsoft Entra ID via Console Client Credentials Flow
 
 This is 3rd tutorial of the **Auth Series**. Before proceeding to this 
-tutorial, make sure you follow the 2nd tutorial here: [Auth Series #2 - Protect ASP.NET Core Api with Azure AD/Microsoft Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman) 
+tutorial, make sure you follow the 2nd tutorial here: [Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman) 
 as we will create new console application to call our previous protected **WeatherForecast** endpoint.
 
 We're going to use Client Credentials Flow (Machine to Machine communication). Thus, no user login involvement in this demo.
