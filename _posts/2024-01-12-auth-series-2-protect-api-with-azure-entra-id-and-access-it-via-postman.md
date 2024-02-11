@@ -17,8 +17,6 @@ post_image: /assets/images/auth-series-2/2024-01-11_17h42_18.png
 
 # Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman
 
-
-
 This is 2nd tutorial of the **Auth Series**. In this tutorial, we'll create
 a basic ASP.NET Core Web Api and protect it using Azure AD/Microsoft Entra ID.
 If you want to know how to protect web app with Azure AD/Microsoft Entra ID, you can checkout 
