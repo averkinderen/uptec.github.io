@@ -127,8 +127,7 @@ Some of them are related to Client Id, Tenant Id and Scopes we saw earlier.
 
 Ok, now we need to add a method to initiate the login. This method will prepare from creating the storage cache helper until the **PublicClientApplication** initialization. Because this app uses Device Code flow, we should use public client option and no need for Client Secret.
 
-The **StorageCreationPropertiesBuilder** and **MsalCacheHelper** are responsible to store and retrieve saved token 
-we gain using **PublicClientApplication** instance to a file in our system. In our sample, we name it: **'token.cache'**.
+The **StorageCreationPropertiesBuilder** and **MsalCacheHelper** are responsible to store and retrieve saved token we gain using **PublicClientApplication** instance to a file in our system. In our sample, we name it: **'token.cache'**.
 
 ```
         static async Task InitiateLogin()
@@ -162,8 +161,7 @@ we gain using **PublicClientApplication** instance to a file in our system. In o
 
 ![2024 01 16 15H47 19](/assets/images/auth-series-4/2024-01-16_15h47_19.png)
 
-Add the InitiateLogin method to static constructor for the Program class. By doing this, 
-once the program starts, the InitiateLogin will be called automatically.
+Add the InitiateLogin method to static constructor for the Program class. By doing this, once the program starts, the InitiateLogin will be called automatically.
 
 ```
         static Program()
@@ -225,7 +223,7 @@ we will use it. But, if token doesn't exist or expire, we will do a login proces
 
 ![2024 01 16 15H48 31](/assets/images/auth-series-4/2024-01-16_15h48_31.png)
 
-The next methods will be GetHttpClient and InvokeApiEndpoint methods. Here, we will fetch api endpoint and utilize the access token. 
+The next methods will be GetHttpClient and InvokeApiEndpoint methods. Here, we will fetch api endpoint and utilize the access token.
 
 ```
         static async Task<HttpClient> GetHttpClient()
@@ -255,8 +253,7 @@ The next methods will be GetHttpClient and InvokeApiEndpoint methods. Here, we w
 
 ![2024 01 16 15H48 59](/assets/images/auth-series-4/2024-01-16_15h48_59.png)
 
-Last method, we will add logic inside the Main method to choose whether or not we will fetch the api or quit. 
-This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
+Last method, we will add logic inside the Main method to choose whether or not we will fetch the api or quit. This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
 
 ```
         static void Main(string[] args)
@@ -290,8 +287,7 @@ This way, we can test to fetch again and again to see that in the next fetch, we
 
 ### 4. Test The Application
 
-Before we test our console client app, we should run our previous WeatherForecast protected api. 
-To do so, open the project in Visual Studio, and run it.
+Before we test our console client app, we should run our previous WeatherForecast protected api. To do so, open the project in Visual Studio, and run it.
 
 ![2024 01 16 15H50 12](/assets/images/auth-series-4/2024-01-16_15h50_12.png)
 
@@ -303,8 +299,7 @@ Now, we can run our console app. Choose the **'1'** to fetch the token and api.
 
 ![2024 01 16 15H51 58](/assets/images/auth-series-4/2024-01-16_15h51_58.png)
 
-Once you hit the Enter, you will be given a link and a code. You need to copy past the link in the browser 
-and also in the text box of webpage, enter the code you get from console.
+Once you hit the Enter, you will be given a link and a code. You need to copy past the link in the browser and also in the text box of webpage, enter the code you get from console.
 
 ![2024 01 16 15H56 02](/assets/images/auth-series-4/2024-01-16_15h56_02.png)
 
@@ -316,8 +311,7 @@ If nothing goes wrong, you will see that our console client app can fetch the ap
 
 ![2024 01 16 15H57 24](/assets/images/auth-series-4/2024-01-16_15h57_24.png)
 
-Now, try to enter **'1'** again and you'll notice that we don't need to login again even 
-if you close the app and run it again. 
+Now, try to enter **'1'** again and you'll notice that we don't need to login again even if you close the app and run it again.
 
 ![2024 01 16 15H57 31](/assets/images/auth-series-4/2024-01-16_15h57_31.png)
 
@@ -325,11 +319,9 @@ if you close the app and run it again.
 
 On Windows OS, to check the token cache file, you can go to Local folder like in the screenshot below.
 
-
 ![2024 01 16 15H57 55](/assets/images/auth-series-4/2024-01-16_15h57_55.png)
 
-Ok, i think that's all for this tutorial. The next topic we will talk about calling protected api via 
-web application.
+Ok, i think that's all for this tutorial. The next topic we will talk about calling protected api via web application.
 
 Thank you.
 
