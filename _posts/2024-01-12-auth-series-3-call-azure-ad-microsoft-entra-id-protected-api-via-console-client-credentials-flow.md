@@ -35,7 +35,7 @@ We're going to use Client Credentials Flow (Machine to Machine communication). T
 
 ![2024 01 13 06H27 01](/assets/images/auth-series-3/2024-01-13_06h27_01.png)
 
-If you follow our previous tutorial, we have created two new app registrations:
+If you did follow our previous tutorial, you will have created two new app registrations:
 
     - uptec-auth-api: This app registration used by our protected WeatherForecast api
     - uptec-auth-api-caller: This app registration used by Postman to call the protected api
@@ -44,7 +44,7 @@ Now, we need to go to **uptec-auth-api-caller** app registration to generate a n
 
 > NB: If you don't use the same name, make sure you go to your app registration for calling the api.
 
-Go to the Secret Menu, and generate a new secret here. Once completed, take a note on the generated secret.
+Go to the Secret Menu, and generate a new secret here. Once completed, take a note of the generated secret.
 
 ![2024 01 13 06H34 09](/assets/images/auth-series-3/2024-01-13_06h34_09.png)
 
@@ -60,11 +60,11 @@ If you have created the client secret, don't forget to re-capture the client id 
 
 If you take a look on the previous tutorial for our WeatherForecast api, we used a scope named: **Access.Read** to be used by Postman.
 
-Now, because we use Client Credentials Flow, we do not use this anymore. We use what we call an **App Role**. It is still the same mechanism like scope but used by applications that don't require user interaction.
+Previously we used Client Credentials Flow. However now We use what we call an **App Role**. It is still the same mechanism like scope but used by applications that don't require user interaction.
 
 ![2024 01 13 06H36 34](/assets/images/auth-series-3/2024-01-13_06h36_34.png)
 
-Ok, go to **uptec-auth-api's** app registration, and go to the **App roles** menu. In that page, Create new app role as shown below.
+Ok, go to **uptec-auth-api's** app registration, and go to the **App roles** menu. In that page, Create a new app role as shown below.
 
 ![2024 01 13 06H46 59](/assets/images/auth-series-3/2024-01-13_06h46_59.png)
 
