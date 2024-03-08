@@ -17,6 +17,12 @@ post_image: /assets/images/auth-series-4/2024-01-16_15h57_24.png
 
 # Auth Series #4 - Call ASP.NET Core API Protected By Azure AD/Microsoft Entra ID via Console App Using Device Code Flow
 
+This is the 4th tutorial of the **Auth Series**.
+
+- Post 1: https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc
+- Post 2: https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman
+- Post 3: https://uptec.io/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow
+
 This is the 4th tutorial of the **Auth Series**. In tutorial, we are going to make a simple console application built on top of .NET 7x and will call the api protected by Azure AD/Microsoft Entra ID.
 I encourage you to follow 2nd tutorial in here: [Auth Series #2 - Protect ASP.NET Core Api with Azure Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman).
 The 2nd tutorial is about a setup for the api to be protected by Azure AD/Microsoft Entra ID. Also, it's optional to read the 3rd tutorial that talks about calling the api via console app using **Client Credentials Flow** in here: [Auth Series #3 - Call ASP.NET Core API Protected by Azure AD/Microsoft Entra ID via Console Client Credentials Flow](/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow).
@@ -55,7 +61,7 @@ On the selected app registration, don't forget to take a note these following th
 
 ![2024 01 16 10H35 13](/assets/images/auth-series-4/2024-01-16_10h35_13.png)
 
-If you follow previous tutorials, we have added a permission for **Access.Read** scope from **uptec-auth-api** 
+If you follow previous tutorials, we have added a permission for **Access.Read** scope from **uptec-auth-api**
 app registration. Now, go to API Permissions, click the Access.Read permission, copy the scope permission there.
 
 **NB: If you don't see what shown in below screenshot, make sure you follow our 2nd tutorial.**
@@ -90,7 +96,7 @@ using System.Net.Http.Headers;
 
 ```
 
-Inside the Program class, add the following private members. 
+Inside the Program class, add the following private members.
 Some of them are related to Client Id, Tenant Id and Scopes we saw earlier.
 
 ```
@@ -125,7 +131,7 @@ Some of them are related to Client Id, Tenant Id and Scopes we saw earlier.
 
 ![2024 01 16 15H47 00](/assets/images/auth-series-4/2024-01-16_15h47_00.png)
 
-Ok, now we need to add a method to initiate the login. This method will prepare from creating the storage cache helper until the **PublicClientApplication** initialization. Because this app uses Device Code flow, we should use public client option and no need for Client Secret.
+Ok, now we need to add a method to initiate the login. This method will prepare from creating the storage cache helper until the **PublicClientApplication** initialisation. Because this app uses Device Code flow, we should use public client option and no need for Client Secret.
 
 The **StorageCreationPropertiesBuilder** and **MsalCacheHelper** are responsible to store and retrieve saved token we gain using **PublicClientApplication** instance to a file in our system. In our sample, we name it: **'token.cache'**.
 
@@ -172,9 +178,8 @@ Add the InitiateLogin method to static constructor for the Program class. By doi
 
 ![2024 01 16 15H47 27](/assets/images/auth-series-4/2024-01-16_15h47_27.png)
 
-The next one is GetAccessToken method. This is a crucial method as it will be called multiple times. 
-The logic is, we will try to acquire the token silently (from the cache). If the token exists and doesn't expire, 
-we will use it. But, if token doesn't exist or expire, we will do a login process using Device Code Flow mechanism.
+The next one is GetAccessToken method. This is a crucial method as it will be called multiple times.
+The logic is, we will try to acquire the token silently (from the cache). If the token exists and doesn't expire, we will use it. But, if token doesn't exist or expire, we will do a login process using Device Code Flow mechanism.
 
 ```
         static async Task<string> GetAccessToken()
