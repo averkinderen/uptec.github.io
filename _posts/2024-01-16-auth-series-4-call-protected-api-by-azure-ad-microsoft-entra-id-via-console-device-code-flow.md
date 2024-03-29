@@ -19,17 +19,15 @@ post_image: /assets/images/auth-series-4/2024-01-16_15h57_24.png
 
 This is the 4th tutorial of the **Auth Series**.
 
-- Post 1: https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc
-- Post 2: https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman
-- Post 3: https://uptec.io/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow
+- [Post 1:](https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
+- [Post 2:](https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman)
+- [Post 3:](https://uptec.io/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow)
 
 This is the 4th tutorial of the **Auth Series**. In tutorial, we are going to make a simple console application built on top of .NET 7x and will call the api protected by Azure AD/Microsoft Entra ID.
-I encourage you to follow 2nd tutorial in here: [Auth Series #2 - Protect ASP.NET Core Api with Azure Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman).
-The 2nd tutorial is about a setup for the api to be protected by Azure AD/Microsoft Entra ID. Also, it's optional to read the 3rd tutorial that talks about calling the api via console app using **Client Credentials Flow** in here: [Auth Series #3 - Call ASP.NET Core API Protected by Azure AD/Microsoft Entra ID via Console Client Credentials Flow](/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow).
 
 ![2024 01 16 15H44 13](/assets/images/auth-series-4/2024-01-16_15h44_13.gif)
 
-The console application we'd like to build is almost the same like in the 3rd tutorial. The difference is, we will make use of device code flow and this flow is public client application not confidential client application like in the 3rd tutorial.
+The console application we'd like to build is almost the same as in the 3rd tutorial. The difference is, we will make use of device code flow and this flow is a public client application. Not a confidential client application like in the 3rd tutorial.
 
 So we have to make sure to turn on the **Allow Public Client Flow** in the Azure Portal.
 
@@ -40,9 +38,9 @@ So we have to make sure to turn on the **Allow Public Client Flow** in the Azure
 
 The **Microsoft.Identity.Client.Extensions.Msal** library is used to store & retrieve the access token we have obtained. So, the next calls (as long as the token doesn't expire) don't require calling the token endpoint again. This way, it will speed-up the application authentication process.
 
-Let's start for the 1st step.
+Let's start with the 1st step.
 
-### 1. Enable "Allow Public Client Flow"
+## 1. Enable "Allow Public Client Flow"
 
 If you follow our previous tutorial, we have created two new app registrations:
 
@@ -68,7 +66,7 @@ app registration. Now, go to API Permissions, click the Access.Read permission, 
 
 ![2024 01 16 10H43 26](/assets/images/auth-series-4/2024-01-16_10h43_26.png)
 
-### 2. Create Console Application
+## 2. Create Console Application
 
 Create default console application in Visual Studio, and give the name as you wish.
 
@@ -85,7 +83,7 @@ Once created, open the **Manage Nuget Package**, and install these packages:
 
 ![2024 01 16 10H44 32](/assets/images/auth-series-4/2024-01-16_10h44_32.png)
 
-### 3. Implement The Code
+## 3. Implement The Code
 
 On the **Program.cs**, add these namespaces:
 
@@ -254,11 +252,12 @@ The next methods will be GetHttpClient and InvokeApiEndpoint methods. Here, we w
             Console.WriteLine(response);
         }
 ```
+
 ![2024 01 16 15H48 50](/assets/images/auth-series-4/2024-01-16_15h48_50.png)
 
 ![2024 01 16 15H48 59](/assets/images/auth-series-4/2024-01-16_15h48_59.png)
 
-Last method, we will add logic inside the Main method to choose whether or not we will fetch the api or quit. This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
+Lastly we will add logic inside the Main method to choose whether or not we will fetch the api or quit. This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
 
 ```
         static void Main(string[] args)
@@ -290,7 +289,7 @@ Last method, we will add logic inside the Main method to choose whether or not w
 
 ![2024 01 16 15H49 15](/assets/images/auth-series-4/2024-01-16_15h49_15.png)
 
-### 4. Test The Application
+## 4. Test The Application
 
 Before we test our console client app, we should run our previous WeatherForecast protected api. To do so, open the project in Visual Studio, and run it.
 
@@ -304,7 +303,7 @@ Now, we can run our console app. Choose the **'1'** to fetch the token and api.
 
 ![2024 01 16 15H51 58](/assets/images/auth-series-4/2024-01-16_15h51_58.png)
 
-Once you hit the Enter, you will be given a link and a code. You need to copy past the link in the browser and also in the text box of webpage, enter the code you get from console.
+Once you hit the Enter, you will be given a link and a code. You need to copy paste the link in the browser and also in the text box of the webpage, enter the code you get from console.
 
 ![2024 01 16 15H56 02](/assets/images/auth-series-4/2024-01-16_15h56_02.png)
 
@@ -322,7 +321,7 @@ Now, try to enter **'1'** again and you'll notice that we don't need to login ag
 
 ![2024 01 16 15H44 13](/assets/images/auth-series-4/2024-01-16_15h44_13.gif)
 
-On Windows OS, to check the token cache file, you can go to Local folder like in the screenshot below.
+On Windows OS, to check the token cache file, you can go to Local folder like as seen in the screenshot below:
 
 ![2024 01 16 15H57 55](/assets/images/auth-series-4/2024-01-16_15h57_55.png)
 
