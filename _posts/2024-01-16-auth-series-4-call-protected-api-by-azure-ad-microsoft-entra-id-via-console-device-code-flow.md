@@ -17,18 +17,19 @@ post_image: /assets/images/auth-series-4/2024-01-16_15h57_24.png
 
 # Auth Series #4 - Call ASP.NET Core API Protected By Azure AD/Microsoft Entra ID via Console App Using Device Code Flow
 
-This is 4th tutorial of the **Auth Series**. In tutorial, we are going to make a simple 
-console application built on top of .NET 7x and will call the api protected by Azure AD/Microsoft Entra ID.
+This is the 4th tutorial of the **Auth Series**.
+
+- Post 1: https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc
+- Post 2: https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman
+- Post 3: https://uptec.io/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow
+
+This is the 4th tutorial of the **Auth Series**. In tutorial, we are going to make a simple console application built on top of .NET 7x and will call the api protected by Azure AD/Microsoft Entra ID.
 I encourage you to follow 2nd tutorial in here: [Auth Series #2 - Protect ASP.NET Core Api with Azure Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman).
-The 2nd tutorial is about a setup for the api to be protected by Azure AD/Microsoft Entra ID. 
-Also, it's optional to read the 3rd tutorial that talks about calling the api via console app 
-using **Client Credentials Flow** in here: [Auth Series #3 - Call ASP.NET Core API Protected by Azure AD/Microsoft Entra ID via Console Client Credentials Flow](/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow).
+The 2nd tutorial is about a setup for the api to be protected by Azure AD/Microsoft Entra ID. Also, it's optional to read the 3rd tutorial that talks about calling the api via console app using **Client Credentials Flow** in here: [Auth Series #3 - Call ASP.NET Core API Protected by Azure AD/Microsoft Entra ID via Console Client Credentials Flow](/auth-series-3-call-azure-ad-microsoft-entra-id-protected-api-via-console-client-credentials-flow).
 
 ![2024 01 16 15H44 13](/assets/images/auth-series-4/2024-01-16_15h44_13.gif)
 
-The console application we'd like to build is almost the same like in the 3rd tutorial. 
-The difference is, we will make use of device code flow and this flow is public client application not 
-confidential client application like in the 3rd tutorial.
+The console application we'd like to build is almost the same like in the 3rd tutorial. The difference is, we will make use of device code flow and this flow is public client application not confidential client application like in the 3rd tutorial.
 
 So we have to make sure to turn on the **Allow Public Client Flow** in the Azure Portal.
 
@@ -37,14 +38,11 @@ So we have to make sure to turn on the **Allow Public Client Flow** in the Azure
     - Framework: .NET 7x Console Project
     - Nuget: Microsoft.Identity.Client and Microsoft.Identity.Client.Extensions.Msal
 
-The **Microsoft.Identity.Client.Extensions.Msal** library is used to store & retrieve the access token 
-we have obtained. So, the next calls (as long as the token doesn't expire) don't require calling the token endpoint again. 
-This way, it will speed-up the application authentication process.
+The **Microsoft.Identity.Client.Extensions.Msal** library is used to store & retrieve the access token we have obtained. So, the next calls (as long as the token doesn't expire) don't require calling the token endpoint again. This way, it will speed-up the application authentication process.
 
 Let's start for the 1st step.
 
 ### 1. Enable "Allow Public Client Flow"
-
 
 If you follow our previous tutorial, we have created two new app registrations:
 
@@ -56,20 +54,19 @@ Now, we need to go to **uptec-auth-api-caller** app registration to enable the A
 ![2024 01 16 10H32 21](/assets/images/auth-series-4/2024-01-16_10h32_21.png)
 
 On the selected app registration, don't forget to take a note these following things:
- 
+
     - Client Id
     - Tenant Id
     - Scopes
 
 ![2024 01 16 10H35 13](/assets/images/auth-series-4/2024-01-16_10h35_13.png)
 
-If you follow previous tutorials, we have added a permission for **Access.Read** scope from **uptec-auth-api** 
+If you follow previous tutorials, we have added a permission for **Access.Read** scope from **uptec-auth-api**
 app registration. Now, go to API Permissions, click the Access.Read permission, copy the scope permission there.
 
 **NB: If you don't see what shown in below screenshot, make sure you follow our 2nd tutorial.**
 
 ![2024 01 16 10H43 26](/assets/images/auth-series-4/2024-01-16_10h43_26.png)
-
 
 ### 2. Create Console Application
 
@@ -88,7 +85,6 @@ Once created, open the **Manage Nuget Package**, and install these packages:
 
 ![2024 01 16 10H44 32](/assets/images/auth-series-4/2024-01-16_10h44_32.png)
 
-
 ### 3. Implement The Code
 
 On the **Program.cs**, add these namespaces:
@@ -100,7 +96,7 @@ using System.Net.Http.Headers;
 
 ```
 
-Inside the Program class, add the following private members. 
+Inside the Program class, add the following private members.
 Some of them are related to Client Id, Tenant Id and Scopes we saw earlier.
 
 ```
@@ -135,14 +131,9 @@ Some of them are related to Client Id, Tenant Id and Scopes we saw earlier.
 
 ![2024 01 16 15H47 00](/assets/images/auth-series-4/2024-01-16_15h47_00.png)
 
-Ok, now we need to add a method to initiate the login. This method will prepare from 
-creating the storage cache helper until the **PublicClientApplication** initialization.
-Because this app uses Device Code flow, we should use public client option and no need for Client Secret.
+Ok, now we need to add a method to initiate the login. This method will prepare from creating the storage cache helper until the **PublicClientApplication** initialisation. Because this app uses Device Code flow, we should use public client option and no need for Client Secret.
 
-The **StorageCreationPropertiesBuilder** and **MsalCacheHelper** are responsible to store and retrieve saved token 
-we gain using **PublicClientApplication** instance to a file in our system. In our sample, we name it: **'token.cache'**.
-
-
+The **StorageCreationPropertiesBuilder** and **MsalCacheHelper** are responsible to store and retrieve saved token we gain using **PublicClientApplication** instance to a file in our system. In our sample, we name it: **'token.cache'**.
 
 ```
         static async Task InitiateLogin()
@@ -176,8 +167,7 @@ we gain using **PublicClientApplication** instance to a file in our system. In o
 
 ![2024 01 16 15H47 19](/assets/images/auth-series-4/2024-01-16_15h47_19.png)
 
-Add the InitiateLogin method to static constructor for the Program class. By doing this, 
-once the program starts, the InitiateLogin will be called automatically.
+Add the InitiateLogin method to static constructor for the Program class. By doing this, once the program starts, the InitiateLogin will be called automatically.
 
 ```
         static Program()
@@ -188,9 +178,8 @@ once the program starts, the InitiateLogin will be called automatically.
 
 ![2024 01 16 15H47 27](/assets/images/auth-series-4/2024-01-16_15h47_27.png)
 
-The next one is GetAccessToken method. This is a crucial method as it will be called multiple times. 
-The logic is, we will try to acquire the token silently (from the cache). If the token exists and doesn't expire, 
-we will use it. But, if token doesn't exist or expire, we will do a login process using Device Code Flow mechanism.
+The next one is GetAccessToken method. This is a crucial method as it will be called multiple times.
+The logic is, we will try to acquire the token silently (from the cache). If the token exists and doesn't expire, we will use it. But, if token doesn't exist or expire, we will do a login process using Device Code Flow mechanism.
 
 ```
         static async Task<string> GetAccessToken()
@@ -239,9 +228,7 @@ we will use it. But, if token doesn't exist or expire, we will do a login proces
 
 ![2024 01 16 15H48 31](/assets/images/auth-series-4/2024-01-16_15h48_31.png)
 
-
-The next methods will be GetHttpClient and InvokeApiEndpoint methods. 
-Here, we will fetch api endpoint and utilize the access token. 
+The next methods will be GetHttpClient and InvokeApiEndpoint methods. Here, we will fetch api endpoint and utilize the access token.
 
 ```
         static async Task<HttpClient> GetHttpClient()
@@ -271,8 +258,7 @@ Here, we will fetch api endpoint and utilize the access token.
 
 ![2024 01 16 15H48 59](/assets/images/auth-series-4/2024-01-16_15h48_59.png)
 
-Last method, we will add logic inside the Main method to choose whether or not we will fetch the api or quit. 
-This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
+Last method, we will add logic inside the Main method to choose whether or not we will fetch the api or quit. This way, we can test to fetch again and again to see that in the next fetch, we don't need to login anymore (still using the token cache).
 
 ```
         static void Main(string[] args)
@@ -304,16 +290,13 @@ This way, we can test to fetch again and again to see that in the next fetch, we
 
 ![2024 01 16 15H49 15](/assets/images/auth-series-4/2024-01-16_15h49_15.png)
 
-
 ### 4. Test The Application
 
-Before we test our console client app, we should run our previous WeatherForecast protected api. 
-To do so, open the project in Visual Studio, and run it.
+Before we test our console client app, we should run our previous WeatherForecast protected api. To do so, open the project in Visual Studio, and run it.
 
 ![2024 01 16 15H50 12](/assets/images/auth-series-4/2024-01-16_15h50_12.png)
 
 ![2024 01 16 15H50 34](/assets/images/auth-series-4/2024-01-16_15h50_34.png)
-
 
 Now, we can run our console app. Choose the **'1'** to fetch the token and api.
 
@@ -321,8 +304,7 @@ Now, we can run our console app. Choose the **'1'** to fetch the token and api.
 
 ![2024 01 16 15H51 58](/assets/images/auth-series-4/2024-01-16_15h51_58.png)
 
-Once you hit the Enter, you will be given a link and a code. You need to copy past the link in the browser 
-and also in the text box of webpage, enter the code you get from console.
+Once you hit the Enter, you will be given a link and a code. You need to copy past the link in the browser and also in the text box of webpage, enter the code you get from console.
 
 ![2024 01 16 15H56 02](/assets/images/auth-series-4/2024-01-16_15h56_02.png)
 
@@ -334,27 +316,21 @@ If nothing goes wrong, you will see that our console client app can fetch the ap
 
 ![2024 01 16 15H57 24](/assets/images/auth-series-4/2024-01-16_15h57_24.png)
 
-Now, try to enter **'1'** again and you'll notice that we don't need to login again even 
-if you close the app and run it again. 
+Now, try to enter **'1'** again and you'll notice that we don't need to login again even if you close the app and run it again.
 
 ![2024 01 16 15H57 31](/assets/images/auth-series-4/2024-01-16_15h57_31.png)
 
 ![2024 01 16 15H44 13](/assets/images/auth-series-4/2024-01-16_15h44_13.gif)
 
-
 On Windows OS, to check the token cache file, you can go to Local folder like in the screenshot below.
-
 
 ![2024 01 16 15H57 55](/assets/images/auth-series-4/2024-01-16_15h57_55.png)
 
-Ok, i think that's all for this tutorial. The next topic we will talk about calling protected api via 
-web application.
+Ok, i think that's all for this tutorial. The next topic we will talk about calling protected api via web application.
 
 Thank you.
 
-
 > Sample project: https://github.com/mirzaevolution/Uptec-Calls-Protected-Api-Device-Code-Flow
-
 
 Regards,
 
