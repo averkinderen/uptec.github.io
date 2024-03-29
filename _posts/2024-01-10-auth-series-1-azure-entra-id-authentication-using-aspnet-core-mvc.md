@@ -4,11 +4,11 @@ title: "Auth Series #1 - Microsoft Entra ID Authentication using ASP.NET Core MV
 author: mirzaevolution
 categories:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
 tags:
   - Azure
-  - Entra ID
+  - Microsoft Entra ID
   - Authentication
 post_image: /assets/images/auth-series-1/2024-01-15_08h50_42.png
 ---
