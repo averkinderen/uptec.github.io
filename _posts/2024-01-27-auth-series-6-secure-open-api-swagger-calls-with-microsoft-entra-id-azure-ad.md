@@ -23,7 +23,7 @@ post_image: /assets/images/auth-series-6/2024-01-27_00h14_22.png
 
 <br/>
 This is 6th tutorial of the **Auth Series**. Previously in the 5th tutorial - [# Auth Series #5 - Call Microsoft Entra ID/Azure AD Protected Web API via ASP.NET Core MVC using Authorization Code Flow ](https://github.com/mirzaevolution/Uptec-Web-App-Calls-Protected-Api-Authorization-Code-Flow) 
-we have created sample protected Todo Api and Todo Web App (ASP.NET Core MVC) and make the web calls the api via Authorization Code Flow to access 
+we have created sample protected Todo Api and Todo Web App (ASP.NET Core MVC) and make the web calls to the api via Authorization Code Flow to access 
 the protected api. 
 
 Now, we want to improve our Todo Api to have an open api a.k.a **Swagger** integrated into the project. So, we can test our api without having to setup any 
@@ -45,9 +45,10 @@ i encourage you to read those first to make sure you have better understanding o
 
 If you follow along our 2nd tutorial, we have created two new app registrations:
 
- - uptec-auth-api: This app registration used by our protected apis previously
- - uptec-auth-api-caller: This app registration used by client apps to call the protected api
+ - **uptec-auth-api**: This app registration used by our protected apis previously
+ - **uptec-auth-api-caller**: This app registration used by client apps to call the protected api
 
+<br/>
 ![2024 01 26 21H29 33](/assets/images/auth-series-6/2024-01-26_21h29_33.png)
 
 To register our Swagger, make sure you go to the **uptec-auth-api-caller**. In the Overview page, click the Endpoints button and 
@@ -75,7 +76,7 @@ Don't forget to hit save after changes we made.
 
 The last step is to take a note on the scopes we created earlier for the API (in the **uptec-auth-api**'s app registration). 
 Because in the previous tutorials we have requested the permission inside the **uptec-auth-api-caller**, you don't need to switch to **uptec-auth-api**.
-Just go to the API permissions, click the Access.Read & Access.Write permissions and copy the full permission names like in 
+Just go to the API permissions, click the Access.Read & Access. Write permissions and copy the full permission names like in 
 the screenshots below.
 
 ![2024 01 26 21H59 38](/assets/images/auth-series-6/2024-01-26_21h59_38.png)
