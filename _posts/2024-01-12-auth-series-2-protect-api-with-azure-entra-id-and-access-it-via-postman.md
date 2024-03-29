@@ -17,11 +17,8 @@ post_image: /assets/images/auth-series-2/2024-01-11_17h42_18.png
 
 # Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman
 
-This is the 2nd tutorial of the **Auth Series**. In this tutorial, we'll create
-a basic ASP.NET Core Web Api and protect it using Azure AD/Microsoft Entra ID.
-If you want to know how to protect web app with Azure AD/Microsoft Entra ID, you can checkout 
-our previous tutorial: [Auth Series #1 - Azure Entra Id Authentication using ASP.NET Core MVC](/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
-
+This is the 2nd tutorial of the **Auth Series**. In this tutorial, we'll create a basic ASP.NET Core Web Api and protect it using Azure AD/Microsoft Entra ID.
+If you want to know how to protect web app with Azure AD/Microsoft Entra ID, you can checkout our previous tutorial: [Auth Series #1 - Azure Entra Id Authentication using ASP.NET Core MVC](/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
 
 **Requirements:**
 
@@ -34,7 +31,7 @@ We are going to make a simple WeatherForecast Api and protect it using JWT Beare
 
 Before we move further, let's start with the first step.
 
-### 1. Create a Web Api Registration
+## 1. Create a Web Api Registration
 
 We need to create an api registration in the Azure Portal so that we can protect our api. First, we need to go to **Microsoft Entra ID Portal > App Registrations > New registration**.
 
@@ -62,7 +59,7 @@ After that, add a new scope, give it a name -> **Access.Read** and fill the othe
 
 Once created, don't forget to copy/take a note of the scope for later use.
 
-### 2. Create Web Api Project
+## 2. Create Web Api Project
 
 Now, we are will create an ASP.NET Core Web API project. In this section, I will use .NET 7.
 
@@ -121,7 +118,7 @@ Cleanup everything and leave the "https" section with default port 8181.
 
 ![2024 01 11 17H33 18](/assets/images/auth-series-2/2024-01-11_17h33_18.png)
 
-### 3. Register the MicrosoftIdentityWebApiAuthentication
+## 3. Register the MicrosoftIdentityWebApiAuthentication
 
 Once the above setup is completed, we will enable the api protection by customising the **Program.cs** file.
 Add the following namespace:
@@ -201,7 +198,7 @@ The last step is to grant admin consent for requested api's scope(s).
 
 ### 7. Access the Protected API via Postman
 
-After step #6 is completed, now we can access the api with Postman. To do so, we need to collect OAuth v2 authorization and token endpoints from our api's app registration.
+After step #6 is completed, we can now access the api with Postman. To do so, we need to collect the OAuth v2 authorization and token endpoints from our api's app registration.
 
 Take a note of both the OAuth v2 authorization and token endpoints like the image below:
 
@@ -247,7 +244,6 @@ We can also copy paste our access token in the https://jwt.ms to inspect the pay
 ![2024 01 11 17H56 59](/assets/images/auth-series-2/2024-01-11_17h56_59.png)
 
 ![2024 01 11 17H57 28](/assets/images/auth-series-2/2024-01-11_17h57_28.png)
-.
 
 In the next tutorial, we will be accessing our protected api via console application built on top of .NET Core 7x.
 

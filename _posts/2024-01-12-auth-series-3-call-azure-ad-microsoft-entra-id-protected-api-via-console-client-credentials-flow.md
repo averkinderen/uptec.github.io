@@ -19,8 +19,8 @@ post_image: /assets/images/auth-series-3/2024-01-14_10h35_32.png
 
 This is the 3rd tutorial of the **Auth Series**.
 
-- Post 1: https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc
-- Post 2: https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman
+- [Post 1:](https://uptec.io/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
+- [Post 2:](https://uptec.io/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman)
 
 Before proceeding with this tutorial, make sure you follow the 2nd tutorial here: [Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman) as we will create a new console application to call our previous protected **WeatherForecast** endpoint.
 
