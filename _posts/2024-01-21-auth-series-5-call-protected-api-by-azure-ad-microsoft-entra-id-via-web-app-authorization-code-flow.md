@@ -24,17 +24,14 @@ post_image: /assets/images/auth-series-5/title.png
 
 <br/>
 
-This is 5th tutorial of the **Auth Series**. Before we start, i really encourage you to read 
-our previous #1 and #2 tutorials that will have same correlation used in this tutorial.
+This is the 5th tutorial of the **Auth Series**. Before we start, I really encourage you to read our previous #1 and #2 tutorials that will give you some context to this tutorial.
 
 [Auth Series #1 - Microsoft Entra ID/Azure AD Authentication using ASP.NET Core MVC](/auth-series-1-azure-entra-id-authentication-using-aspnet-core-mvc)
 
 [Auth Series #2 - Protect ASP.NET Core Api with Microsoft Entra ID/Azure AD and Access It via Postman](/auth-series-2-protect-api-with-azure-entra-id-and-access-it-via-postman)
 
-In this tutorial, we will create a todo api using ASP.NET Core API 7x and let the Microsoft Entra ID/Azure ID 
-as the authorization mechanism to protect our api (OAuth2/JWT). 
-Next, we will also create a web app ASP.NET Core MVC 7x that will call our todo api. 
-The web app will also get protected by Microsoft Entra ID/Azure AD via OpenID Connect Authorization Code Flow.
+In this tutorial, we will create a todo api using ASP.NET Core API 7x and let the Microsoft Entra ID/Azure ID as the authorization mechanism to protect our api (OAuth2/JWT).
+Next, we will also create a web app ASP.NET Core MVC 7x that will call our todo api. The web app will also get protected by Microsoft Entra ID/Azure AD via OpenID Connect Authorization Code Flow.
 
 Here are the requirements used in this tutorial:
 
@@ -53,44 +50,39 @@ If you follow along our 2nd tutorial, we have created two new app registrations:
 
 ![2024 01 18 10H50 07](/assets/images/auth-series-5/2024-01-18_10h50_07.png)
 
-Now, select the **uptec-auth-api** or create new one, and take a note on the client id and tenant id of it.
+Now, select the **uptec-auth-api** or create new one, and take a note of the client id and tenant id
 
 ![2024 01 18 10H50 20](/assets/images/auth-series-5/2024-01-18_10h50_20.png)
 
-Go to the **Expose an API** menu, we can see previously we have added a scope named **Access.Read**. 
+Go to the **Expose an API** menu, we can see previously we have added a scope named **Access.Read**.
 
 ![2024 01 18 10H52 00](/assets/images/auth-series-5/2024-01-18_10h52_00.png)
 
-Now, we need to add new scope named **Access.Write**. These scopes will be used by our API as additional checking mechanism. 
-After JWT validated, the api controller can further check whether or not calling api has the required scopes.
+Now, we need to add new scope named **Access.Write**. These scopes will be used by our API as additional checking mechanism. After the JWT is validated, the api controller can further check whether or not the calling api has the required scopes.
 
 ![2024 01 18 10H58 54](/assets/images/auth-series-5/2024-01-18_10h58_54.png)
 
-Once the new scope created, don't forget to take a note on both scopes as well.
-
+Once the new scope is created, don't forget to take note of both scopes.
 
 ### 2. Register Our Web App and Add The New Scope 'Access.Write'
 
 Switch to App Registration again, and now select the **uptec-auth-api-caller**.
-In this page, take a note on the client id and tenant id as well.
+In this page, take a note on the client id and tenant id.
 
 ![2024 01 18 10H59 38](/assets/images/auth-series-5/2024-01-18_10h59_38.png)
 
-Go to the **Certificates & secrets** menu, create new client secret and take a note on it as 
-we will use this in the web app to call the api.
+Go to the **Certificates & secrets** menu, create new client secret and take a note of it as we will use this in the web app to call the api.
 
 ![2024 01 18 11H00 23](/assets/images/auth-series-5/2024-01-18_11h00_23.png)
 
-To register our web app url, we have to go to **Authentication** page, in the Web Platform, 
-add new url `https://localhost:8282/signin-oidc` and `https://localhost:8282/signout-callback-oidc`.
-This localhost port 8282 will be used by our application and the reason we register it in here is to 
-make sure that we can login/logout and call the api properly.
+To register our web app url, we have to go to the **Authentication** page, in the Web Platform, add following urls `https://localhost:8282/signin-oidc` and `https://localhost:8282/signout-callback-oidc`.
+
+This localhost port 8282 will be used by our application and the reason we register it in here is to  make sure that we can login/logout and call the api properly.
 
 ![2024 01 18 11H28 33](/assets/images/auth-series-5/2024-01-18_11h28_33.png)
 
 The last step, we need to request/add new scope from **uptec-auth-api** we have created earlier.
-Go to **API permissions**, Click "**Add a permission**" button, in the "**APIs my organization uses/My APIs**", search 
-**uptec-auth-api** and select it. 
+Go to **API permissions**, Click "**Add a permission**" button, in the "**APIs my organization uses/My APIs**", search  **uptec-auth-api** and select it.
 
 ![2024 01 18 11H29 23](/assets/images/auth-series-5/2024-01-18_11h29_23.png)
 
@@ -107,7 +99,6 @@ Let's create web api for our Todo API. Follow our instructions below.
 ![2024 01 18 11H57 58](/assets/images/auth-series-5/2024-01-18_11h57_58.png)
 
 ![2024 01 18 11H58 13](/assets/images/auth-series-5/2024-01-18_11h58_13.png)
-
 
 Go to the **launchSettings.json** and modify the content to be like this:
 
@@ -128,9 +119,10 @@ Go to the **launchSettings.json** and modify the content to be like this:
 }
 
 ```
+
 ![2024 01 18 12H02 04](/assets/images/auth-series-5/2024-01-18_12h02_04.png)
 
-Go to the nuget package, please add the following nuget package as well 
+Go to the nuget package, please add the following nuget package as well
 `Microsoft.Identity.Web`.
 
 ![2024 01 18 12H03 17](/assets/images/auth-series-5/2024-01-18_12h03_17.png)
@@ -354,28 +346,23 @@ namespace UptecTodoApi
 
 ![2024 01 18 14H02 41](/assets/images/auth-series-5/2024-01-18_14h02_41.png)
 
-The last step, we need to create **TodosController** for our api. 
+The last step, we need to create **TodosController** for our api.
 This controller need to be decorated with **[Authorize]** attribute to protect the controller.
 
 ![2024 01 18 13H49 25](/assets/images/auth-series-5/2024-01-18_13h49_25.png)
 
 In the Read Access region block, we need to add 2 methods, Get Todo By Id and Get All Todos.
-These methods will be decorated by **[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes:Read")]** that will make sure 
-these 2 methods must have **Access.Read** scope we defined in the Azure Portal. The **RequiredScope** attribute will read the config value in 
-the **appsettings.json** we modified above.
+These methods will be decorated by **[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes:Read")]** that will make sure these 2 methods must have **Access.Read** scope we defined in the Azure Portal. The **RequiredScope** attribute will read the config value in the **appsettings.json** we modified above.
 
 ![2024 01 18 13H49 48](/assets/images/auth-series-5/2024-01-18_13h49_48.png)
 
-In another hand, we will also create Post, Put and Delete methods and will be decorated with 
-**[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes:Write")]**. The same with above, it will check 
-the scope existence of **Access.Write** scope.
+On the other hand, we will also create Post, Put and Delete methods and will be decorated with **[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes:Write")]**. The same as above, it will check the scope existence of **Access.Write** scope.
 
 ![2024 01 18 13H50 35](/assets/images/auth-series-5/2024-01-18_13h50_35.png)
 
 ![2024 01 18 13H50 49](/assets/images/auth-series-5/2024-01-18_13h50_49.png)
 
 ![2024 01 18 13H50 54](/assets/images/auth-series-5/2024-01-18_13h50_54.png)
-
 
 **TodosController.cs**
 
@@ -477,7 +464,6 @@ on how to call protected api via Postman.
 
 Great!! Our api worked. We can now focus on the Web App!
 
-
 ### 3. Setup ASP.NET Core MVC Calling App - Todo App
 
 We will be using ASP.NET Core MVC 7x project. Make sure to follow below steps.
@@ -493,8 +479,7 @@ Now, install 2 nuget packages:
 - Microsoft.Identity.Web
 - Microsoft.Identity.Web.DownstreamApi
 
-**Microsoft.Identity.Web.DownstreamApi** is an extension of **Microsoft.Identity.Web** that will have a helper 
-that can be used to call protected api and does the caching and incremental consent automatically.
+**Microsoft.Identity.Web.DownstreamApi** is an extension of **Microsoft.Identity.Web** that will have a helper that can be used to call protected api and does the caching and incremental consent automatically.
 
 Once the nuget packages got installed, modify the **appsettings.json** as below.
 
@@ -528,16 +513,11 @@ Once the nuget packages got installed, modify the **appsettings.json** as below.
 ```
 ![2024 01 18 14H29 18](/assets/images/auth-series-5/2024-01-18_14h29_18.png)
 
-
-As we can see, we need to have client secret we created earlier to call our api. 
-We also specify complete scope names (with identifier api://....). 
+As we can see, we need to have the client secret we created earlier to call our api. We also specify complete scope names (with identifier api://....). 
 Don't forget to set the base url of the TodoApi to be the same like our api has.
 
-Now, jump to **Program.cs**. Modify the file to add authentication mechanism via 
-**AddMicrosoftIdentityWebAppAuthentication** OpenIdConnect - Authorization Code Flow. This method will have extension methods of
-**EnableTokenAcquisitionToCallDownstreamApi** and **AddDownstreamApi**.
-Those extension methods will register our api defined in the **appsettings.json**. 
-So, to call the api, we later just need to inject IDownstreamApi interface and call it via that interface.
+Now, jump to **Program.cs**. Modify the file to add authentication mechanism via **AddMicrosoftIdentityWebAppAuthentication** OpenIdConnect - Authorization Code Flow. This method will have extension methods of **EnableTokenAcquisitionToCallDownstreamApi** and **AddDownstreamApi**.
+Those extension methods will register our api defined in the **appsettings.json**. So, to call the api, we just need to inject the IDownstreamApi interface and call it via that interface.
 We also enable MemoryTokenCaches that will store our token in the memory after we got it. 
 You can also use distributed caching like Redis, SQL Server etc.
 
@@ -596,8 +576,7 @@ namespace UptecWebAppCallsProtectedApi
 
 ![2024 01 18 22H05 53](/assets/images/auth-series-5/2024-01-18_22h05_53.png)
 
-
-We also customize default authentication controller in above code. 
+We also customized the default authentication controller in above code. 
 Now, let's create AuthController and put the code as below.
 
 **AuthController.cs**
@@ -832,21 +811,15 @@ namespace UptecWebAppCallsProtectedApi.Controllers
 
 ```
 
-
 ![2024 01 18 22H09 26](/assets/images/auth-series-5/2024-01-18_22h09_26.png)
 
-We decorated our controller with **Authorize** attribute and **AuthorizeForScopes** attribute. 
-The **AuthorizeForScopes** attribute will make sure that our controller will have additional checking 
-mechanism. It will check whether or not the authorized user has the **Access.Read** & **Access.Write** scopes we defined earlier. 
+We decorated our controller with **Authorize** attribute and **AuthorizeForScopes** attribute.
+The **AuthorizeForScopes** attribute will make sure that our controller will have additional checks in place. It will check whether or not the authorized user has the **Access.Read** & **Access.Write** scopes we defined earlier.
 This attribute will read the scope list from our **appsettings.json -> TodoApi:Scopes**.
 
-The next thing is, we also inject the **IDownstreamApi** interface. This interface has few helper methods for us 
-to call an api like **HttpClient** instance does. The difference is, we don't need to care about caching or setting the access token to the 
-authorization header like we did in **HttpClient**.
+Next we need to inject the **IDownstreamApi** interface. This interface has few helper methods for us to call an api like **HttpClient** instance does. The difference is, we don't need to care about caching or setting the access token to the authorization header like we did in **HttpClient**.
 
-The methods exposed by **IDownstreamApi** are also clear. Like GetForUserAsync, PostForUserAsync etc. If you are building 
-machine-to-machine apps, we need to use something like GetForAppAsync, PostForAppAsync etc instead.
-
+The methods exposed by **IDownstreamApi** are also clear. Like GetForUserAsync, PostForUserAsync etc. If you are building machine-to-machine apps, we need to use something like GetForAppAsync, PostForAppAsync etc instead.
 
 ![2024 01 18 22H10 15](/assets/images/auth-series-5/2024-01-18_22h10_15.png)
 
@@ -907,7 +880,6 @@ namespace UptecWebAppCallsProtectedApi.Models
 }
 
 ```
-
 
 Next, create the views as defined below under folder -> **Views > Todos**
 
@@ -1085,13 +1057,11 @@ After both are running, just do the login process in web app and start accessing
 
 ![2024 01 18 22H15 09](/assets/images/auth-series-5/2024-01-18_22h15_09.png)
 
-Ok, i think that's all for this tutorial. You can check both source code of the projects below:
-
+Ok, This is everything for this tutorial. You can check both source code of the projects below:
 
 > Web Api: https://github.com/mirzaevolution/UptecTodoApi
 
 > Web App: https://github.com/mirzaevolution/Uptec-Web-App-Calls-Protected-Api-Authorization-Code-Flow
-
 
 Regards,
 
