@@ -7,10 +7,10 @@
 - text: Contact
   url: /contact
 - text: Solutions
-  url: /Solutions
+  url: /solutions
   submenu:
   - text: Cloud Service Enablement
-    url: /cse
+    url: /cloudserviceenablement
   - text: Developer Enablement
     url: /de
   - text: Platform Engineering
