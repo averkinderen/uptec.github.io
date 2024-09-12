@@ -6,7 +6,30 @@
   url: /blog
 - text: Contact
   url: /contact
-- text: Privacy
-  url: /privacy
-- text: Marketplace
-  url: https://marketplace.uptec.io
+- text: Solutions
+  url: /Solutions
+  submenu:
+  - text: Cloud Service Enablement
+    url: /cse
+  - text: Developer Enablement
+    url: /de
+  - text: Platform Engineering
+    url: /platform
+  - text: Enterprise Integration
+    url: /integration
+  - text: Security Engineering
+    url: /devsecops
+- text: Products
+  url: /products
+  submenu:
+  - text: Cloud Service Enablement Dashboard
+    url: /team
+  - text: NsgOps
+    url: /team
+- text: Our Story
+  url: /about
+  submenu:
+  - text: Our Leadership Team
+    url: /team
+  - text: Privacy
+    url: /privacy
