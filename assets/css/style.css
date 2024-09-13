@@ -295,7 +295,7 @@ label {
 	position: absolute;
 	top: 100%;
 	left: -40px;
-	min-width: 200px;
+	min-width: 220px;
 	background-color: #fff;
 	opacity: 0;
 	transition: all 300ms ease-in;
