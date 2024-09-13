@@ -12,20 +12,22 @@
   - text: Cloud Service Enablement
     url: /cloudserviceenablement
   - text: Developer Enablement
-    url: /de
+    url: /developerenablement
   - text: Platform Engineering
-    url: /platform
+    url: /platformengineering
   - text: Enterprise Integration
-    url: /integration
+    url: /enterpriseintegration
   - text: Security Engineering
     url: /devsecops
 - text: Products
   url: /products
   submenu:
   - text: Cloud Service Enablement Dashboard
-    url: /team
+    url: /cloudserviceenablementdasbhoard
   - text: NsgOps
-    url: /team
+    url: /nsgops
+  - text: SubnetFinder
+    url: /subnetfinder 
 - text: Our Story
   url: /about
   submenu:
