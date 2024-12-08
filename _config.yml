@@ -1,8 +1,8 @@
 
 title: "Uptec – Cloud done differently"
 description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "https://averkinderen.github.io/uptec.github.io/" # the subpath of your site, e.g. /blog
-url: "https://averkinderen.github.io/uptec.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://averkinderen.github.io/uptec.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 phone_number: "+61450590633"
 email: "info@uptec.io"
 company_name: "Uptec Pty Ltd"
